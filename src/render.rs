@@ -10,7 +10,7 @@ pub struct RenderConfig<'a> {
     font_scale: Scale,
     default_font_color: Rgb<u8>,
     space_width: u32,
-    line_height: u32,
+    new_line_height: u32,
 }
 
 impl<'a> RenderConfig<'a> {
@@ -26,7 +26,7 @@ impl<'a> RenderConfig<'a> {
             font_scale,
             default_font_color,
             space_width: font_scale.x as u32,
-            line_height: font_scale.y as u32
+            new_line_height: font_scale.y as u32
         }
     }
 
@@ -38,8 +38,8 @@ impl<'a> RenderConfig<'a> {
         self.space_width = width;
     }
 
-    pub fn set_line_height(&mut self, height: u32) {
-        self.line_height = height;
+    pub fn set_new_line_height(&mut self, height: u32) {
+        self.new_line_height = height;
     }
 }
 
@@ -61,7 +61,7 @@ pub fn generate_draw_text_details(text: Vec<Segment>, box_width: u32, render_con
         // If it's a new line then reset the offset to a new line
         if segment == Segment::NewLine {
             current_offset.0 = 0;
-            current_offset.1 += render_config.line_height;
+            current_offset.1 += render_config.new_line_height;
             continue;
         }
 
@@ -97,7 +97,7 @@ pub fn generate_draw_text_details(text: Vec<Segment>, box_width: u32, render_con
         // When the text have overflown, set offset to new line and also update draw input offset to that
         if current_offset.0 + text_width as u32 > box_width {
             current_offset.0 = 0;
-            current_offset.1 += render_config.line_height;
+            current_offset.1 += render_config.font_scale.y as u32;
             dti.offset = current_offset.clone();
         }
         
@@ -108,7 +108,7 @@ pub fn generate_draw_text_details(text: Vec<Segment>, box_width: u32, render_con
         current_offset.0 += text_width as u32 + render_config.space_width;
     }
     
-    (draw_text_inputs, current_offset.1 + render_config.line_height)
+    (draw_text_inputs, current_offset.1 + render_config.font_scale.y as u32)
 }
 
 pub fn render_draw_text_inputs(canvas: &mut ImageBuffer<Rgb<u8>, Vec<<Rgb<u8> as Pixel>::Subpixel>>, draw_text_inputs: Vec<DrawTextInput>, box_offset: (i32, i32)) {
