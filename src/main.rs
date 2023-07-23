@@ -1,5 +1,5 @@
 use image::{Rgb, RgbImage};
-use imageproc::drawing::{draw_text_mut, text_size, draw_filled_rect, draw_filled_rect_mut};
+use imageproc::drawing::{draw_filled_rect_mut};
 use imageproc::rect::Rect;
 use render::{RenderConfig, generate_draw_text_details, render_draw_text_inputs};
 use rusttype::{Font, Scale};

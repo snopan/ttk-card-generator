@@ -1,5 +1,5 @@
 use image::{Rgb, ImageBuffer, Pixel};
-use imageproc::drawing::{draw_text_mut, Canvas, text_size};
+use imageproc::drawing::{draw_text_mut, text_size};
 use rusttype::{Scale, Font};
 use super::text::types::{Segment, Format};
 

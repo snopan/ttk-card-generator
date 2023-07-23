@@ -5,8 +5,6 @@ use parser::{ get_formatted_word };
 pub mod types;
 mod parser;
 
-use image::Rgb;
-
 pub fn split_text(text: String) -> Vec<Segment> {
     let mut accumulated_words: Vec<Segment> = vec![];
     for (i, line) in text.split("\n").enumerate() {
