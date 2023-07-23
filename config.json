@@ -4,6 +4,7 @@
       "name": "Liu Bei",
       "health": 4,
       "isMonarch": true,
+      "isMale": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -20,6 +21,7 @@
       "name": "Zhu Ge Liang",
       "health": 3,
       "isMonarch": false,
+      "isMale": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -36,6 +38,7 @@
       "name": "Zhao Yun",
       "health": 4,
       "isMonarch": false,
+      "isMale": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -48,6 +51,7 @@
       "name": "Guan Yu",
       "health": 4,
       "isMonarch": false,
+      "isMale": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -60,11 +64,12 @@
       "name": "Huang Yue Ying",
       "health": 3,
       "isMonarch": false,
+      "isMale": false,
       "kingdom": "shu",
       "skills": [
         {
           "name": "Enlightenment",
-          "description": "Every time you use a non delayed scroll card (before it activates), you can immediately draw a card."
+          "description": "Every time you use a non delayed scroll card (before it activates), you can immediately draw 1 card."
         },
         {
           "name": "Prodigy",
@@ -76,6 +81,7 @@
       "name": "Ma Chao",
       "health": 4,
       "isMonarch": false,
+      "isMale": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -84,7 +90,7 @@
         },
         {
           "name": "Ironsteed",
-          "description": "When you use [Strike] on any target player, you can choose to make a Judgement. If the Judgement Result is a ♥ or ♦, the [Strike] cannot be evaded."
+          "description": "When you use [Strike] on any target player, you can choose to make a Judgement. If the Judgement Result is a ♥ or ♦, the [Strike] cannot be evaded by a [Dodge]."
         }
       ]
     },
@@ -92,6 +98,7 @@
       "name": "Zhang Fei",
       "health": 4,
       "isMonarch": false,
+      "isMale": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -104,6 +111,7 @@
       "name": "Young Zhu Ge Liang",
       "health": 3,
       "isMonarch": false,
+      "isMale": true,
       "kingdom": "",
       "skills": [
         {
@@ -121,10 +129,88 @@
       ]
     },
     {
-      "name": "",
-      "health": ,
+      "name": "Pang Tong",
+      "health": 3,
       "isMonarch": false,
-      "kingdom": "",
+      "isMale": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Shackle",
+          "description": "You can use any ♣ hand cards as [Chain]."
+        },
+        {
+          "name": "Nirvana",
+          "description": "Restricted Ability: When you are on the brink of death, you can choose to discard all your cards and reset to unchained state. Then resurrect to 3 health and draw 3 cards."
+        }
+      ]
+    },
+    {
+      "name": "Huang Zhong",
+      "health": 4,
+      "isMonarch": false,
+      "isMale": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Fearsome Archer",
+          "description": "During your playing phase, you can make your [Strike] not evadable by [Dodge] under either of these circumstances: \n1. The number of hand cards of the target player is less than or equal to your attacking range. \n2. The number of hand cards of the target player is more than or equal to your health."
+        }
+      ]
+    },
+    {
+      "name": "Wei Yan",
+      "health": 4,
+      "isMonarch": false,
+      "isMale": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Mad Bone",
+          "description": "Enforced Ability: Whenever you deal damage to any player within physical range of 1, you regain 1 health for every 1 damage dealt."
+        }
+      ]
+    },
+    {
+      "name": "Meng Huo",
+      "health": 4,
+      "isMonarch": false,
+      "isMale": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Mastermind",
+          "description": "Enforced Ability: [Barbarian Invasion] has no effect to you. You will be the source of any damage dealt by the use of [Barbarian Invasion]."
+        },
+        {
+          "name": "Rise Again",
+          "description": "During your drawing phase, if you are not at full health, you can choose to give up the drawing phase and instead, flip X number of cards from the deck (X being the amount of health you've currently lost). Of these X cards, you will gain 1 health for every ♥ suit card. The ♥ suit cards will be discarded while the remaining cards will be kept into your hand."
+        }
+      ]
+    },
+    {
+      "name": "Zhu Rong",
+      "health": 4,
+      "isMonarch": false,
+      "isMale": false,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Giant Elephant",
+          "description": "Enforced Ability: [Barbarian Invasion] has no effect to you. When any other players use [Barbarian Invasion] and the card's effects are concluded, you will acquire that card."
+        },
+        {
+          "name": "Fiery Edge",
+          "description": "Whenever you use [Strike] to deal damage, you can choose to Compare Cards. If you win you take 1 card from the target."
+        }
+      ]
+    },
+    {
+      "name": "Fa Zhen",
+      "health": 3,
+      "isMonarch": false,
+      "isMale": true,
+      "kingdom": "shu",
       "skills": [
         {
           "name": "",
@@ -136,7 +222,8 @@
       "name": "",
       "health": ,
       "isMonarch": false,
-      "kingdom": "",
+      "isMale": true,
+      "kingdom": "shu",
       "skills": [
         {
           "name": "",
@@ -144,6 +231,44 @@
         }
       ]
     },
-
+    {
+      "name": "",
+      "health": ,
+      "isMonarch": false,
+      "isMale": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "",
+      "health": ,
+      "isMonarch": false,
+      "isMale": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "",
+      "health": ,
+      "isMonarch": false,
+      "isMale": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "",
+          "description": ""
+        }
+      ]
+    }
   ]
 }
