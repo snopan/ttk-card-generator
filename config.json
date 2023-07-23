@@ -1,0 +1,149 @@
+{
+  "characters": [
+    {
+      "name": "Liu Bei",
+      "health": 4,
+      "isMonarch": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Benevolence",
+          "description": "During your playing phase, you can give any amount of hand cards to any other players.  If the total number of cards given away is 2 or more, you regain 1 health."
+        },
+        {
+          "name": "Rouse",
+          "description": "Monarch Ability: You can ask any Shu characters to use a [Strike] for you."
+        }
+      ]
+    },
+    {
+      "name": "Zhu Ge Liang",
+      "health": 3,
+      "isMonarch": false,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Stargazing",
+          "description": "At the beginning of your turn, you can view X number of cards from the top of the deck (X equals to the number of players still in play with X having maximum of 5). Of these X cards, you can choose any number of cards to place at the top of the pile and rest are to be placed at the bottom of the pile."
+        },
+        {
+          "name": "Desolate",
+          "description": "Enforced Ability: When you have no hand cards, you cannot become the target of [Strike] or [Duel]."
+        }
+      ]
+    },
+    {
+      "name": "Zhao Yun",
+      "health": 4,
+      "isMonarch": false,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Dragonheart",
+          "description": "You can use hand cards [Strike] as [Dodge], and [Dodge] as [Strike]."
+        }
+      ]
+    },
+    {
+      "name": "Guan Yu",
+      "health": 4,
+      "isMonarch": false,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Paladin",
+          "description": "You can use any ♥ or ♦ suit cards as [Strike]."
+        }
+      ]
+    },
+    {
+      "name": "Huang Yue Ying",
+      "health": 3,
+      "isMonarch": false,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Enlightenment",
+          "description": "Every time you use a non delayed scroll card (before it activates), you can immediately draw a card."
+        },
+        {
+          "name": "Prodigy",
+          "description": "Any scroll cards you use have no range limit."
+        }
+      ]
+    },
+    {
+      "name": "Ma Chao",
+      "health": 4,
+      "isMonarch": false,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Horsemanship",
+          "description": "Enforced Ability: You will always have -1 distance in any range calculations."
+        },
+        {
+          "name": "Ironsteed",
+          "description": "When you use [Strike] on any target player, you can choose to make a Judgement. If the Judgement Result is a ♥ or ♦, the [Strike] cannot be evaded."
+        }
+      ]
+    },
+    {
+      "name": "Zhang Fei",
+      "health": 4,
+      "isMonarch": false,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Berserk",
+          "description": "During your playing phase, you can use any number of [Strike]."
+        }
+      ]
+    },
+    {
+      "name": "Young Zhu Ge Liang",
+      "health": 3,
+      "isMonarch": false,
+      "kingdom": "",
+      "skills": [
+        {
+          "name": "Formation",
+          "description": "Enforced Ability: When you have no armour equipped, it will always appear as if you have [Eight Trigrams] equipped."
+        },
+        {
+          "name": "Arson",
+          "description": "During your playing phase, you can use any ♥ or ♦ suit hand cards as [Fire Attack]."
+        },
+        {
+          "name": "Decipher",
+          "description": "You can use any ♠ or ♣ hand cards as [Ward]."
+        }
+      ]
+    },
+    {
+      "name": "",
+      "health": ,
+      "isMonarch": false,
+      "kingdom": "",
+      "skills": [
+        {
+          "name": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "",
+      "health": ,
+      "isMonarch": false,
+      "kingdom": "",
+      "skills": [
+        {
+          "name": "",
+          "description": ""
+        }
+      ]
+    },
+
+  ]
+}
