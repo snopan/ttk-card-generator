@@ -9,11 +9,11 @@
       "skills": [
         {
           "name": "Benevolence",
-          "description": "During your playing phase, you can give any amount of hand cards to any other players.  If the total number of cards given away is 2 or more, you regain 1 health."
+          "description": "During your playing phase, you can give any amount of hand cards to another player.  If the total number of cards given away is 2 or more, you regain 1 health."
         },
         {
-          "name": "Rouse",
-          "description": "Monarch Ability: You can ask any Shu characters to use a [Strike] for you."
+          "name": "Rouse [Monarch Ability]",
+          "description": "You can ask any Shu characters to use a [Strike] for you."
         }
       ]
     },
@@ -25,12 +25,12 @@
       "kingdom": "shu",
       "skills": [
         {
-          "name": "Stargazing",
-          "description": "At the beginning of your turn, you can view X number of cards from the top of the deck (X equals to the number of players still in play with X having maximum of 5). Of these X cards, you can choose any number of cards to place at the top of the pile and rest are to be placed at the bottom of the pile."
+          "name": "Star Gaze",
+          "description": "At the beginning of your turn, you can view X number of cards from the top of the deck (X equals to the number of players still in play with X having maximum of 5). Of these X cards, you can choose any number of cards to place on the top of the deck in any order and rest are to be placed at the bottom of the deck in any order."
         },
         {
-          "name": "Desolate",
-          "description": "Enforced Ability: When you have no hand cards, you cannot become the target of [Strike] or [Duel]."
+          "name": "Desolate [Enforced Ability]",
+          "description": "When you have no hand cards, you cannot become the target of [Strike] or [Duel]."
         }
       ]
     },
@@ -42,7 +42,7 @@
       "kingdom": "shu",
       "skills": [
         {
-          "name": "Dragonheart",
+          "name": "Dragon Heart",
           "description": "You can use hand cards [Strike] as [Dodge], and [Dodge] as [Strike]."
         }
       ]
@@ -85,8 +85,8 @@
       "kingdom": "shu",
       "skills": [
         {
-          "name": "Horsemanship",
-          "description": "Enforced Ability: You will always have -1 distance in any range calculations."
+          "name": "Horsemanship [Enforced Ability]",
+          "description": "You will always have -1 distance in any range calculations."
         },
         {
           "name": "Ironsteed",
@@ -115,8 +115,8 @@
       "kingdom": "",
       "skills": [
         {
-          "name": "Formation",
-          "description": "Enforced Ability: When you have no armour equipped, it will always appear as if you have [Eight Trigrams] equipped."
+          "name": "Formation [Enforced Ability]",
+          "description": "When you have no armour equipped, it will always appear as if you have [Eight Trigrams] equipped."
         },
         {
           "name": "Arson",
@@ -140,8 +140,8 @@
           "description": "You can use any ♣ hand cards as [Chain]."
         },
         {
-          "name": "Nirvana",
-          "description": "Restricted Ability: When you are on the brink of death, you can choose to discard all your cards and reset to unchained state. Then resurrect to 3 health and draw 3 cards."
+          "name": "Nirvana [Restricted Ability]",
+          "description": "When you are on the brink of death, you can choose to discard all your cards and reset to unchained state. Then resurrect to 3 health and draw 3 cards."
         }
       ]
     },
@@ -166,8 +166,8 @@
       "kingdom": "shu",
       "skills": [
         {
-          "name": "Mad Bone",
-          "description": "Enforced Ability: Whenever you deal damage to any player within physical range of 1, you regain 1 health for every 1 damage dealt."
+          "name": "Mad Bone [Enforced Ability]",
+          "description": "Whenever you deal damage to any player within physical range of 1, you regain 1 health for every 1 damage dealt."
         }
       ]
     },
@@ -179,8 +179,8 @@
       "kingdom": "shu",
       "skills": [
         {
-          "name": "Mastermind",
-          "description": "Enforced Ability: [Barbarian Invasion] has no effect to you. You will be the source of any damage dealt by the use of [Barbarian Invasion]."
+          "name": "Mastermind [Enforced Ability]",
+          "description": "[Barbarian Invasion] has no effect to you. You will be the source of any damage dealt by the use of [Barbarian Invasion]."
         },
         {
           "name": "Rise Again",
@@ -196,8 +196,8 @@
       "kingdom": "shu",
       "skills": [
         {
-          "name": "Giant Elephant",
-          "description": "Enforced Ability: [Barbarian Invasion] has no effect to you. When any other players use [Barbarian Invasion] and the card's effects are concluded, you will acquire that card."
+          "name": "Giant Elephant [Enforced Ability]",
+          "description": "[Barbarian Invasion] has no effect to you. Whenever another player uses [Barbarian Invasion] and the card's effects are concluded, you will acquire that card."
         },
         {
           "name": "Fiery Edge",
@@ -213,47 +213,67 @@
       "kingdom": "shu",
       "skills": [
         {
-          "name": "",
-          "description": ""
+          "name": "Grudges [Enforced Ability]",
+          "description": "Whenever another player cause you to regain 1 health, that player can draw 1 card. Whenever another player deal damage to you, they must give you a ♥ suit hand card or else that player loses 1 health."
+        },
+        {
+          "name": "Dazzlement",
+          "description": "During your playing phase, you can give a ♥ suit hand card to another player, then you can take a card from that player and give to any other player besides that player. Limited to once per turn."
         }
       ]
     },
     {
-      "name": "",
-      "health": ,
+      "name": "Ma Su",
+      "health": 3,
       "isMonarch": false,
       "isMale": true,
       "kingdom": "shu",
       "skills": [
         {
-          "name": "",
-          "description": ""
+          "name": "Mind Game",
+          "description": "During your playing phase, if your number of hand cards exceed your health limit, you can view the top 3 cards of the deck. Of these 3 cards, reveal any number of ♥ suit cards then keep them. For the remaining cards, place on the top of the deck in any order. Limited to once per turn."
+        },
+        {
+          "name": "Weep [Enforced Ability]",
+          "description": "The player that kills you must discard all their cards immediately."
         }
       ]
     },
     {
-      "name": "",
-      "health": ,
+      "name": "Xu Shu",
+      "health": 3,
       "isMonarch": false,
       "isMale": true,
       "kingdom": "shu",
       "skills": [
         {
-          "name": "",
-          "description": ""
+          "name": "Silence [Enforced Ability]",
+          "description": "Non-delayed scroll cards you use have no effect when targeting other players, and non-delayed scroll cards other players use have no effect when targeting you."
+        },
+        {
+          "name": "Nominate",
+          "description": "During your playing phase, you can discard up to 3 cards then let another player draw the same number of cards. For this if you discard 3 cards of the same type, you regain 1 health. Limited to once per turn."
         }
       ]
     },
     {
-      "name": "",
-      "health": ,
-      "isMonarch": false,
+      "name": "Liu Shan",
+      "health": 3,
+      "isMonarch": true,
       "isMale": true,
       "kingdom": "shu",
       "skills": [
         {
-          "name": "",
-          "description": ""
+          "name": "Relish [Enforced Ability]",
+          "description": "Whenever another uses [Strike] targeting you, they must discard a basic card, or that [Strike] has no effect on you."
+        },
+        {
+          "name": "Devolution",
+          "description": "You can skip your play phase. If you do so, you can discard a hand card at the end of your turn and let another player start an extra turn."
+        },
+        {
+          "name": "Irony [Monarch Ability][Awakening Ability]",
+          "description": "At the beginning of your turn, if your health the lowest or among the lowest, you must raise your health limit by 1, regain 1 unit of health and permanently gain the ability [Rouse]."
         }
       ]
     },
