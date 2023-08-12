@@ -124,3 +124,15 @@ pub fn render_draw_text_inputs(canvas: &mut ImageBuffer<Rgb<u8>, Vec<<Rgb<u8> as
         )
     }
 }
+
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_generate_draw_text_details() {
+        let font_regular = Vec::from(include_bytes!("../test/regular.ttf") as &[u8]);
+        let font_regular: Font<'static> = Font::try_from_vec(font_regular).unwrap();
+
+
+    }
+}
