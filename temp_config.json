@@ -20,7 +20,29 @@
   },
   "characters": [
     {
-      "name": "LIU Bei",
+      "name": "Liu Shan",
+      "picture": "./asset/characters/liu_shan.png",
+      "health": 3,
+      "monarch": true,
+      "male": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Relish [Enforced Ability]",
+          "description": "Whenever another uses [Strike] targeting you, they must discard a basic card, or that [Strike] has no effect on you."
+        },
+        {
+          "name": "Devolution",
+          "description": "You can skip your play phase. If you do so, you can discard a hand card at the end of your turn and let another player start an extra turn."
+        },
+        {
+          "name": "Irony [Monarch Ability][Awakening Ability]",
+          "description": "At the beginning of your turn, if your health the lowest or among the lowest, you must raise your health limit by 1, regain 1 unit of health and permanently gain the ability [Rouse]."
+        }
+      ]
+    },
+    {
+      "name": "Liu Bei",
       "picture": "./asset/characters/liu_bei.png",
       "health": 4,
       "monarch": true,
