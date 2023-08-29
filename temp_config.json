@@ -1,0 +1,32 @@
+{
+  "frames": {
+    "kingdomless_zhu": "./asset/frames/kingdomless_zhu.png",
+    "kingdomless": "./asset/frames/kingdomless.png",
+    "shu_zhu": "./asset/frames/shu_zhu.png",
+    "shu": "./asset/frames/shu.png",
+    "wei_zhu": "./asset/frames/wei_zhu.png",
+    "wei": "./asset/frames/wei.png",
+    "wu_zhu": "./asset/frames/wu_zhu.png",
+    "wu": "./asset/frames/wu.png"
+  },
+  "characters": [
+    {
+      "name": "LIU Bei",
+      "picture": "./asset/characters/liu_bei.png",
+      "health": 4,
+      "monarch": true,
+      "male": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Benevolence",
+          "description": "During your playing phase, you can give any amount of hand cards to another player.  If the total number of cards given away is 2 or more, you regain 1 health."
+        },
+        {
+          "name": "Rouse [Monarch Ability]",
+          "description": "You can ask any Shu characters to use a [Strike] for you."
+        }
+      ]
+    }
+  ]
+}

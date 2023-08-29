@@ -4,3 +4,6 @@
 /output/*
 
 /text_render/target
+
+/asset/characters
+/asset/frames

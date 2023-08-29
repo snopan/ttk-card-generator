@@ -1,10 +1,20 @@
 {
+  "frames": {
+    "kingdomless_zhu": "./asset/frames/kingdomless_zhu.png",
+    "kingdomless": "./asset/frames/kingdomless.png",
+    "shu_zhu": "./asset/frames/shu_zhu.png",
+    "shu": "./asset/frames/shu.png",
+    "wei_zhu": "./asset/frames/wei_zhu.png",
+    "wei": "./asset/frames/wei.png",
+    "wu_zhu": "./asset/frames/wu_zhu.png",
+    "wu": "./asset/frames/wu.png"
+  },
   "characters": [
     {
       "name": "Liu Bei",
       "health": 4,
-      "isMonarch": true,
-      "isMale": true,
+      "monarch": true,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -20,8 +30,8 @@
     {
       "name": "Zhu Ge Liang",
       "health": 3,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -37,8 +47,8 @@
     {
       "name": "Zhao Yun",
       "health": 4,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -50,8 +60,8 @@
     {
       "name": "Guan Yu",
       "health": 4,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -63,8 +73,8 @@
     {
       "name": "Huang Yue Ying",
       "health": 3,
-      "isMonarch": false,
-      "isMale": false,
+      "monarch": false,
+      "male": false,
       "kingdom": "shu",
       "skills": [
         {
@@ -80,8 +90,8 @@
     {
       "name": "Ma Chao",
       "health": 4,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -97,8 +107,8 @@
     {
       "name": "Zhang Fei",
       "health": 4,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -110,8 +120,8 @@
     {
       "name": "Young Zhu Ge Liang",
       "health": 3,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "",
       "skills": [
         {
@@ -131,8 +141,8 @@
     {
       "name": "Pang Tong",
       "health": 3,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -148,8 +158,8 @@
     {
       "name": "Huang Zhong",
       "health": 4,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -161,8 +171,8 @@
     {
       "name": "Wei Yan",
       "health": 4,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -174,8 +184,8 @@
     {
       "name": "Meng Huo",
       "health": 4,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -191,8 +201,8 @@
     {
       "name": "Zhu Rong",
       "health": 4,
-      "isMonarch": false,
-      "isMale": false,
+      "monarch": false,
+      "male": false,
       "kingdom": "shu",
       "skills": [
         {
@@ -208,8 +218,8 @@
     {
       "name": "Fa Zhen",
       "health": 3,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -225,8 +235,8 @@
     {
       "name": "Ma Su",
       "health": 3,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -242,8 +252,8 @@
     {
       "name": "Xu Shu",
       "health": 3,
-      "isMonarch": false,
-      "isMale": true,
+      "monarch": false,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -259,8 +269,8 @@
     {
       "name": "Liu Shan",
       "health": 3,
-      "isMonarch": true,
-      "isMale": true,
+      "monarch": true,
+      "male": true,
       "kingdom": "shu",
       "skills": [
         {
@@ -274,19 +284,6 @@
         {
           "name": "Irony [Monarch Ability][Awakening Ability]",
           "description": "At the beginning of your turn, if your health the lowest or among the lowest, you must raise your health limit by 1, regain 1 unit of health and permanently gain the ability [Rouse]."
-        }
-      ]
-    },
-    {
-      "name": "",
-      "health": ,
-      "isMonarch": false,
-      "isMale": true,
-      "kingdom": "shu",
-      "skills": [
-        {
-          "name": "",
-          "description": ""
         }
       ]
     }
