@@ -6,7 +6,7 @@ use rusttype::{Font, Scale};
 use text_render::{render::{render_draw_text_inputs}};
 
 
-pub mod layout;
+mod layout;
 mod operations;
 
 pub struct FontConfig<'a> {
@@ -17,26 +17,29 @@ pub struct FontConfig<'a> {
 
 pub fn make_card(
     name: &str,
-    avatar: &str,
-    frame: &str,
-    health: &str,
     num_health: u32,
     skills: String,
+    avatar_path: &str,
+    frame_path: &str,
+    health_path: &str,
+    name_color: Rgba<u8>,
+    box_color: Rgba<u8>,
+    card_width: u32,
     fonts: FontConfig,
-    layout: &layout::Layout
 ) -> ImageBuffer<Rgba<u8>, Vec<u8>> {
     
+    let layout = layout::new_layout(card_width);
     let mut card = RgbaImage::new(layout.card_width(), layout.card_height());
     
     operations::draw_avatar(
         &mut card,
-        avatar,
+        avatar_path,
         (layout.content_top_left_x() as i64, layout.content_top_left_y() as i64),
         layout.content_width() as f32,
         layout.content_height() as f32
     );
 
-    operations::draw_frame(&mut card, frame);
+    operations::draw_frame(&mut card, frame_path);
 
     let (draw_text_inputs, skills_text_height) = operations::generate_draw_text_details(
         skills,
@@ -62,7 +65,7 @@ pub fn make_card(
         layout.skills_box_outline(),
         layout.skills_box_gap(),
         layout.skills_box_corner(),
-        Rgba([255u8, 255u8, 255u8, 150u8])
+        box_color
     );
 
     render_draw_text_inputs(
@@ -84,14 +87,14 @@ pub fn make_card(
         }, 
         fonts.font_title,
         name,
-        Rgba([136u8, 8u8, 8u8, 255u8]),
+        name_color,
         layout.name_inner_outline() as i32,
         layout.name_outer_outline() as i32,
     );
 
     operations::draw_health(
         &mut card,
-        health,
+        health_path,
         num_health,
         layout.health_top_right_x() as i64,
         layout.health_top_right_y(skills_text_height) as i64,
