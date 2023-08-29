@@ -1,4 +1,4 @@
-use image::Rgb;
+use image::Rgba;
 use super::types::{ Segment, Format };
 
 #[derive(Debug, PartialEq)]
@@ -51,9 +51,9 @@ pub fn get_formatted_word(word: &str) -> Result<Segment, Error> {
     Ok(Segment::Word(String::from(text), formats))
 }
 
-fn color_to_rgb(color: &str) -> Rgb<u8> {
+fn color_to_rgb(color: &str) -> Rgba<u8> {
     match color {
-        "red" => Rgb([255u8, 51u8, 34u8]),
+        "red" => Rgba([255u8, 51u8, 34u8, 1u8]),
         _ => panic!("invalid color detected, this shouldn't happen")
     }
 }

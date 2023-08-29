@@ -1,4 +1,4 @@
-use image::{Rgb, ImageBuffer, Pixel};
+use image::{Rgba, ImageBuffer, Pixel};
 use imageproc::drawing::{draw_text_mut, text_size};
 use rusttype::{Scale, Font};
 use super::text::types::{Segment, Format};
@@ -8,7 +8,7 @@ pub struct RenderConfig<'a> {
     font_regular: &'a Font<'a>,
     font_bold: &'a Font<'a>,
     font_scale: Scale,
-    default_font_color: Rgb<u8>,
+    default_font_color: Rgba<u8>,
     space_width: u32,
     new_line_height: u32,
 }
@@ -18,7 +18,7 @@ impl<'a> RenderConfig<'a> {
         font_regular: &'a Font,
         font_bold: &'a Font,
         font_scale: Scale,
-        default_font_color: Rgb<u8>
+        default_font_color: Rgba<u8>
     ) -> RenderConfig<'a> {
         RenderConfig {
             font_regular: font_regular,
@@ -45,7 +45,7 @@ impl<'a> RenderConfig<'a> {
 
 
 pub struct DrawTextInput<'a> {
-    color: Rgb<u8>,
+    color: Rgba<u8>,
     offset: (u32, u32),
     font: &'a Font<'a>,
     font_scale: Scale,
@@ -111,7 +111,7 @@ pub fn generate_draw_text_details(text: Vec<Segment>, box_width: u32, render_con
     (draw_text_inputs, current_offset.1 + render_config.font_scale.y as u32)
 }
 
-pub fn render_draw_text_inputs(canvas: &mut ImageBuffer<Rgb<u8>, Vec<<Rgb<u8> as Pixel>::Subpixel>>, draw_text_inputs: Vec<DrawTextInput>, box_offset: (i32, i32)) {
+pub fn render_draw_text_inputs(canvas: &mut ImageBuffer<Rgba<u8>, Vec<<Rgba<u8> as Pixel>::Subpixel>>, draw_text_inputs: Vec<DrawTextInput>, box_offset: (i32, i32)) {
     for dti in draw_text_inputs {
         draw_text_mut(
             canvas, 

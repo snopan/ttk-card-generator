@@ -1,9 +1,9 @@
-use image::Rgb;
+use image::Rgba;
 
 #[derive(Debug, PartialEq)]
 pub enum Format {
     Bold,
-    Color(Rgb<u8>)
+    Color(Rgba<u8>)
 }
 
 #[derive(Debug, PartialEq)]
