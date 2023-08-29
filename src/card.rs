@@ -2,6 +2,7 @@
 
 use image::{ImageBuffer, Rgba, RgbaImage, io::Reader, Pixel, imageops::{resize, FilterType, overlay}, DynamicImage};
 
+use imageproc::drawing::draw_text_mut;
 use rusttype::{Font, Scale};
 use text_render::{render::{RenderConfig, DrawTextInput, render_draw_text_inputs}, text::split_text};
 
@@ -22,8 +23,11 @@ pub struct FontConfig<'a> {
 }
 
 pub fn make_card(
+    name: &str,
     avatar: &str,
     frame: &str,
+    health: &str,
+    num_health: u32,
     skills: String,
     fonts: FontConfig,
     layout: &layout::Layout
@@ -77,22 +81,30 @@ pub fn make_card(
         )
     );
 
-    // draw_outline_text_mut(
-    //     &mut image, 
-    //     Rgba([255u8, 255u8, 255u8, 255u8]),
-    //     (CONTENT_TOP_LEFT_X + SKILLS_MARGIN + SKILLS_PADDING) as i32,
-    //     (CONTENT_BOTTOM_RIGHT_Y - SKILLS_MARGIN - skills_height - 100) as i32,
-    //     Scale { x: 90.0, y: 90.0 }, 
-    //     &font_title,
-    //     &config.characters[0].name,
-    //     4,
-    //     Rgba([0u8, 0u8, 0u8, 255u8])
-    // );
+    draw_outline_text_mut(
+        &mut card, 
+        layout.name_top_left_x() as i32,
+        layout.name_top_left_y(skills_text_height) as i32,
+        Scale {
+            x: layout.name_text_scale() as f32,
+            y: layout.name_text_scale() as f32
+        }, 
+        fonts.font_title,
+        name,
+        Rgba([255u8, 255u8, 255u8, 255u8]),
+        4,
+        Rgba([0u8, 0u8, 0u8, 255u8])
+    );
 
-    // let health = Reader::open(config.assets.health.zhu).unwrap().decode().unwrap();
-    // for i in 0..config.characters[0].health {
-    //     overlay(&mut image, &health, CONTENT_BOTTOM_RIGHT_X as i64 - (130 + i as i64 * 50), (CONTENT_BOTTOM_RIGHT_Y - skills_height - 140) as i64);
-    // }
+    draw_health(
+        &mut card,
+        health,
+        num_health,
+        layout.health_top_right_x() as i64,
+        layout.health_top_right_y(skills_text_height) as i64,
+        layout.health_offset() as i64,
+        layout.health_length()
+    );
 
     card
 }
@@ -181,16 +193,52 @@ fn draw_skills_text_box(
     overlay(card, &skills_text_box, box_top_left.0, box_top_left.1);
 }
 
-// fn draw_outline_text_mut<'a>(canvas: , color: Rgba<u8>, x: i32, y: i32, scale: Scale, font: &'a Font<'a>, text: &'a str, outline_size: i32, outline_color: Rgba<u8>) {
-//     let offset: Vec<(i32, i32)> = vec![
-//         (0, outline_size),
-//         (0, -outline_size),
-//         (outline_size, 0),
-//         (-outline_size, 0),
-//     ];
+fn draw_outline_text_mut<'a>(
+    card: &mut Card,
+    x: i32,
+    y: i32,
+    scale: Scale,
+    font: &'a Font<'a>,
+    text: &'a str,
+    text_color: Rgba<u8>,
+    outline_size: i32,
+    outline_color: Rgba<u8>
+) {
+    let offset: Vec<(i32, i32)> = vec![
+        (0, outline_size),
+        (0, -outline_size),
+        (outline_size, 0),
+        (-outline_size, 0),
+    ];
 
-//     for (x_offset, y_offset) in offset {
-//         draw_text_mut(canvas, outline_color, x + x_offset, y + y_offset, scale, font, text);
-//     }
-//     draw_text_mut(canvas, color, x, y, scale, font, text);
-// }
+    for (x_offset, y_offset) in offset {
+        draw_text_mut(card, outline_color, x + x_offset, y + y_offset, scale, font, text);
+    }
+    draw_text_mut(card, text_color, x, y, scale, font, text);
+}
+
+fn draw_health(
+    card: &mut Card,
+    health_path: &str,
+    num_hearts: u32,
+    top_right_x: i64,
+    top_right_y: i64,
+    offset: i64,
+    length: u32,
+) {
+    let health = Reader::open(health_path).unwrap().decode().unwrap();
+    let health = resize::<DynamicImage>(
+        &health,
+        length,
+        length,
+        FilterType::Lanczos3
+    );
+    for i in 0..num_hearts {
+        overlay(
+            card,
+            &health,
+            top_right_x - (i as i64 * offset),
+            top_right_y
+        );
+    }
+}

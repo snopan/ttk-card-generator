@@ -23,8 +23,11 @@ fn main() {
     let layout = card::layout::new_layout(1024);
 
     let card = card::make_card(
+        config.characters[0].name.as_str(),
         config.characters[0].picture.as_str(),
         config.assets.frames.shu.as_str(),
+        config.assets.health.shu.as_str(),
+        config.characters[0].health,
         make_skills_text(&config.characters[0].skills),
         fonts,
         &layout,

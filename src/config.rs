@@ -11,7 +11,7 @@ pub struct Skill {
 pub struct Character {
     pub name: String,
     pub picture: String,
-    pub health: usize,
+    pub health: u32,
     pub monarch: bool,
     pub male: bool,
     pub kingdom: String,

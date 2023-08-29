@@ -16,6 +16,10 @@ const SKILLS_BOX_PADDING: u32 = 25;
 const SKILLS_TEXT_SCALE: u32 = 30;
 const SKILLS_TEXT_SPACE_WIDTH: u32 = 13;
 
+const NAME_TEXT_SCALE: u32 = 90;
+const HEALTH_LENGTH: u32 = 100;
+const HEALTH_OFFSET: u32 = 50;
+
 pub struct Layout {
     card_width: u32,
 }
@@ -75,6 +79,31 @@ impl Layout {
             self.skills_box_padding()
     }
 
+    pub fn name_top_left_x(&self) -> u32 {
+        self.skills_text_top_left_x()
+    }
+
+    pub fn name_top_left_y(&self, skills_text_height: u32) -> u32 {
+        self.skills_box_top_left_y(skills_text_height) - (
+            self.skills_box_margin()/2 +
+            self.name_text_scale()
+        )
+    }
+
+    pub fn health_top_right_x(&self) -> u32 {
+        self.content_bot_right_x() - (
+            self.skills_box_padding() +
+            self.skills_box_outline() +
+            self.skills_box_gap() +
+            self.skills_box_padding() +
+            self.health_length() * 2/3
+        )
+    }
+
+    pub fn health_top_right_y(&self, skills_text_height: u32) -> u32 {
+        self.name_top_left_y(skills_text_height)
+    }
+
     // Sizing
     pub fn skills_box_margin(&self) -> u32 {
         self.scale_value(SKILLS_BOX_MARGIN)
@@ -103,7 +132,19 @@ impl Layout {
     pub fn skills_text_space_width(&self) -> u32 {
         self.scale_value(SKILLS_TEXT_SPACE_WIDTH)
     }
-    
+
+    pub fn name_text_scale(&self) -> u32 {
+        self.scale_value(NAME_TEXT_SCALE)
+    }
+
+    pub fn health_length(&self) -> u32 {
+        self.scale_value(HEALTH_LENGTH)
+    }
+
+    pub fn health_offset(&self) -> u32 {
+        self.scale_value(HEALTH_OFFSET)
+    }
+     
     // Derived sizing
     pub fn content_width(&self) -> u32 {
         self.content_bot_right_x() - self.content_top_left_x()
