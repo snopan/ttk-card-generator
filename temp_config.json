@@ -1,13 +1,22 @@
 {
-  "frames": {
-    "kingdomless_zhu": "./asset/frames/kingdomless_zhu.png",
-    "kingdomless": "./asset/frames/kingdomless.png",
-    "shu_zhu": "./asset/frames/shu_zhu.png",
-    "shu": "./asset/frames/shu.png",
-    "wei_zhu": "./asset/frames/wei_zhu.png",
-    "wei": "./asset/frames/wei.png",
-    "wu_zhu": "./asset/frames/wu_zhu.png",
-    "wu": "./asset/frames/wu.png"
+  "assets": {
+    "health": {
+      "kingdomless": "./asset/health/kingdomless.png",
+      "shu": "./asset/health/shu.png",
+      "wei": "./asset/health/wei.png",
+      "wu": "./asset/health/wu.png",
+      "zhu": "./asset/health/zhu.png"
+    },
+    "frames": {
+      "kingdomless_zhu": "./asset/frames/kingdomless_zhu.png",
+      "kingdomless": "./asset/frames/kingdomless.png",
+      "shu_zhu": "./asset/frames/shu_zhu.png",
+      "shu": "./asset/frames/shu.png",
+      "wei_zhu": "./asset/frames/wei_zhu.png",
+      "wei": "./asset/frames/wei.png",
+      "wu_zhu": "./asset/frames/wu_zhu.png",
+      "wu": "./asset/frames/wu.png"
+    }
   },
   "characters": [
     {

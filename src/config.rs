@@ -19,6 +19,15 @@ pub struct Character {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct Health {
+    pub kingdomless: String,
+    pub shu: String,
+    pub wei: String,
+    pub wu: String,
+    pub zhu: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Frames {
     pub kingdomless_zhu: String,
     pub kingdomless: String,
@@ -31,8 +40,14 @@ pub struct Frames {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct Config {
+pub struct Assets {
+    pub health: Health,
     pub frames: Frames,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Config {
+    pub assets: Assets,
     pub characters: Vec<Character>
 }
 
