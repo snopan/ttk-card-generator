@@ -1,7 +1,7 @@
-use std::rc::Rc;
+
 
 use image::{ImageBuffer, Rgba, RgbaImage, io::Reader, Pixel, imageops::{resize, FilterType, overlay}, DynamicImage};
-use imageproc::{drawing::draw_filled_rect_mut, rect::Rect};
+
 use rusttype::{Font, Scale};
 use text_render::{render::{RenderConfig, DrawTextInput, render_draw_text_inputs}, text::split_text};
 

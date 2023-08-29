@@ -1,14 +1,6 @@
 use card::FontConfig;
-use image::imageops::{overlay, resize, FilterType};
-use image::io::Reader;
-use image::{Rgba, Rgb, RgbImage, RgbaImage, DynamicImage, Pixel, ImageBuffer};
-use imageproc::drawing::{draw_filled_rect_mut, draw_text_mut, Canvas};
-use imageproc::rect::Rect;
-use text_render::render::{RenderConfig, generate_draw_text_details, render_draw_text_inputs};
-use rusttype::{Font, Scale};
-use text_render::text::split_text;
-use std::alloc::Layout;
-use std::{env, cmp, fmt};
+use image::{Pixel};
+use rusttype::{Font};
 
 mod config;
 mod card;
@@ -38,12 +30,12 @@ fn main() {
         &layout,
     );
 
-    let _ = card.save(String::from("./output/image.png")).unwrap();
+    card.save(String::from("./output/image.png")).unwrap();
 }
 
 fn make_skills_text(skills: &Vec<config::Skill>) -> String {
     skills.iter().map(|s| -> String {
-        let name = s.name.split(" ").map(|x| format!("@bold;{}", x)).collect::<Vec<String>>().join(" ");
+        let name = s.name.split(' ').map(|x| format!("@bold;{}", x)).collect::<Vec<String>>().join(" ");
         format!("{}\n{}", name, s.description)
     }).collect::<Vec<String>>().join("\n\n")
 }
