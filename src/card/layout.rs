@@ -17,6 +17,8 @@ const SKILLS_TEXT_SCALE: u32 = 30;
 const SKILLS_TEXT_SPACE_WIDTH: u32 = 13;
 
 const NAME_TEXT_SCALE: u32 = 90;
+const NAME_INNER_OUTLINE: u32 = 4;
+const NAME_OUTER_OUTLINE: u32 = 6;
 const HEALTH_LENGTH: u32 = 100;
 const HEALTH_OFFSET: u32 = 50;
 
@@ -137,6 +139,14 @@ impl Layout {
         self.scale_value(NAME_TEXT_SCALE)
     }
 
+    pub fn name_inner_outline(&self) -> u32 {
+        self.scale_value(NAME_INNER_OUTLINE)
+    }
+
+    pub fn name_outer_outline(&self) -> u32 {
+        self.scale_value(NAME_OUTER_OUTLINE)
+    }
+
     pub fn health_length(&self) -> u32 {
         self.scale_value(HEALTH_LENGTH)
     }
@@ -144,7 +154,7 @@ impl Layout {
     pub fn health_offset(&self) -> u32 {
         self.scale_value(HEALTH_OFFSET)
     }
-     
+
     // Derived sizing
     pub fn content_width(&self) -> u32 {
         self.content_bot_right_x() - self.content_top_left_x()

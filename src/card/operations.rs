@@ -95,29 +95,31 @@ pub fn draw_skills_text_box(
     overlay(card, &skills_text_box, box_top_left.0, box_top_left.1);
 }
 
-pub fn draw_outline_text_mut<'a>(
+pub fn draw_name_text<'a>(
     card: &mut Card,
     x: i32,
     y: i32,
     scale: Scale,
     font: &'a Font<'a>,
     text: &'a str,
-    text_color: Rgba<u8>,
-    outline_size: i32,
-    outline_color: Rgba<u8>
+    inner_outline_color: Rgba<u8>,
+    inner_outline_size: i32,
+    outer_outline_size: i32
 ) {
+    let white = Rgba([255u8, 255u8, 255u8, 255u8]);
+    let black = Rgba([0u8, 0u8, 0u8, 255u8]);
     let offset: Vec<(i32, i32)> = vec![
-        (0, outline_size),
-        (0, -outline_size),
-        (outline_size, 0),
-        (-outline_size, 0),
+        (0, 1),
+        (0, -1),
+        (1, 0),
+        (-1, 0),
     ];
 
-    for (x_offset, y_offset) in offset {
-        draw_text_mut(card, outline_color, x + x_offset, y + y_offset, scale, font, text);
-        draw_text_mut(card, Rgba([136u8, 8u8, 8u8, 255u8]), x + x_offset/2, y + y_offset/2, scale, font, text);
+    for (xo, yo) in offset {
+        draw_text_mut(card, black, x + xo*outer_outline_size, y + yo*outer_outline_size, scale, font, text);
+        draw_text_mut(card, inner_outline_color, x + xo*inner_outline_size, y + yo*inner_outline_size, scale, font, text);
     }
-    draw_text_mut(card, text_color, x, y, scale, font, text);
+    draw_text_mut(card, white, x, y, scale, font, text);
 }
 
 pub fn draw_health(

@@ -9,10 +9,6 @@ use text_render::{render::{render_draw_text_inputs}};
 pub mod layout;
 mod operations;
 
-pub enum Error {
-
-}
-
 pub struct FontConfig<'a> {
     pub font_regular: &'a Font<'a>,
     pub font_bold: &'a Font<'a>,
@@ -78,7 +74,7 @@ pub fn make_card(
         )
     );
 
-    operations::draw_outline_text_mut(
+    operations::draw_name_text(
         &mut card, 
         layout.name_top_left_x() as i32,
         layout.name_top_left_y(skills_text_height) as i32,
@@ -88,9 +84,9 @@ pub fn make_card(
         }, 
         fonts.font_title,
         name,
-        Rgba([255u8, 255u8, 255u8, 255u8]),
-        6,
-        Rgba([0u8, 0u8, 0u8, 255u8])
+        Rgba([136u8, 8u8, 8u8, 255u8]),
+        layout.name_inner_outline() as i32,
+        layout.name_outer_outline() as i32,
     );
 
     operations::draw_health(
