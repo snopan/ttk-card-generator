@@ -1,27 +1,27 @@
 {
   "fonts": {
-    "regular": "./asset/regular.ttf",
-    "bold": "./asset/bold.ttf",
-    "title": "./asset/title.ttf"
+    "regular": "./assets/regular.ttf",
+    "bold": "./assets/bold.ttf",
+    "title": "./assets/title.ttf"
   },
   "health": {
-    "kingdomless": "./asset/health/kingdomless.png",
-    "shu": "./asset/health/shu.png",
-    "wei": "./asset/health/wei.png",
-    "wu": "./asset/health/wu.png",
-    "zhu": "./asset/health/zhu.png"
+    "kingdomless": "./assets/health/kingdomless.png",
+    "shu": "./assets/health/shu.png",
+    "wei": "./assets/health/wei.png",
+    "wu": "./assets/health/wu.png",
+    "zhu": "./assets/health/zhu.png"
   },
   "frames": {
-    "kingdomless_zhu": "./asset/frames/kingdomless_zhu.png",
-    "kingdomless": "./asset/frames/kingdomless.png",
-    "shu_zhu": "./asset/frames/shu_zhu.png",
-    "shu": "./asset/frames/shu.png",
-    "wei_zhu": "./asset/frames/wei_zhu.png",
-    "wei": "./asset/frames/wei.png",
-    "wu_zhu": "./asset/frames/wu_zhu.png",
-    "wu": "./asset/frames/wu.png"
+    "kingdomless_zhu": "./assets/frames/kingdomless_zhu.png",
+    "kingdomless": "./assets/frames/kingdomless.png",
+    "shu_zhu": "./assets/frames/shu_zhu.png",
+    "shu": "./assets/frames/shu.png",
+    "wei_zhu": "./assets/frames/wei_zhu.png",
+    "wei": "./assets/frames/wei.png",
+    "wu_zhu": "./assets/frames/wu_zhu.png",
+    "wu": "./assets/frames/wu.png"
   },
   "characters": {
-    "Liu Bei": "./asset/characters/liu_bei.png"
+    "Liu Bei": "./assets/characters/liu_bei.png"
   }
 }

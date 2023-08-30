@@ -1,3 +1,5 @@
+use std::{io::{self, BufReader, BufRead, Read}, fs::File};
+
 use card::FontConfig;
 use image::Rgba;
 use rusttype::Font;
@@ -11,10 +13,9 @@ fn main() {
     let assets = config::load_assets(String::from("./assets.json")).unwrap();
     let styles = config::load_styles(String::from("./styles.json")).unwrap();
 
-
-    let font_regular = Font::try_from_vec(Vec::from(include_bytes!("../asset/regular.ttf") as &[u8])).unwrap();
-    let font_bold = Font::try_from_vec(Vec::from(include_bytes!("../asset/bold.ttf") as &[u8])).unwrap();
-    let font_title = Font::try_from_vec(Vec::from(include_bytes!("../asset/title.ttf") as &[u8])).unwrap();
+    let font_regular = load_font(assets.fonts.regular).unwrap();
+    let font_bold = load_font(assets.fonts.bold).unwrap();
+    let font_title = load_font(assets.fonts.title).unwrap();
 
     let fonts: FontConfig = FontConfig{
         font_regular: &font_regular,
@@ -103,5 +104,30 @@ fn get_box_color(kingdom: &str, monarch: bool, colors: &config::SkillBoxColors) 
         "wei" => Rgba(colors.wei),
         "wu" => Rgba(colors.wu),
         _ => panic!("Not a valid kingdom!")
+    }
+}
+
+#[derive(Debug)]
+pub enum Error {
+    OpenFileFail(io::Error),
+    ReadBufferFail(io::Error),
+    ConvertFontFail,
+}
+fn load_font<'a>(path: String) -> Result<Font<'a>, Error> {
+    let file = match File::open(path) {
+        Ok(f) => f,
+        Err(error) => return Err(Error::OpenFileFail(error))
+    };
+
+    let mut buf_reader = BufReader::new(file);
+    let mut buf: Vec<u8> = vec![];
+    match buf_reader.read_to_end(&mut buf) {
+        Err(error) => return Err(Error::ReadBufferFail(error)),
+        _ => ""
+    };
+
+    match Font::try_from_vec(buf.to_vec()) {
+        Some(f) => Ok(f),
+        None => Err(Error::ConvertFontFail)
     }
 }

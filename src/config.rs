@@ -22,6 +22,12 @@ pub struct Characters {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct Fonts {
+    pub regular: String,
+    pub bold: String,
+    pub title: String,
+}
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Health {
     pub kingdomless: String,
     pub shu: String,
@@ -42,6 +48,7 @@ pub struct Frames {
 }
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Assets {
+    pub fonts: Fonts,
     pub health: Health,
     pub frames: Frames,
     pub characters: HashMap<String, String>
