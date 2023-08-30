@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 use image::Rgba;
 
 use crate::config;
@@ -7,6 +9,14 @@ pub fn make_skills_text(skills: &[config::Skill]) -> String {
         let name = s.name.split(' ').map(|x| format!("@bold;{}", x)).collect::<Vec<String>>().join(" ");
         format!("{}\n{}", name, s.description)
     }).collect::<Vec<String>>().join("\n\n")
+}
+
+pub fn get_avatar_path<'a>(name: &str, character_assets: &'a HashMap<String, String>) -> &'a str {
+    if !character_assets.contains_key(name) {
+        panic!("No avatar found for {}", name);
+    }
+
+    character_assets[name].as_str()
 }
 
 pub fn get_frame_path<'a>(kingdom: &str, monarch: bool, frames: &'a config::Frames) -> &'a str {

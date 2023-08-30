@@ -31,7 +31,7 @@ fn main() {
         name,
         character.health,
         character::make_skills_text(&character.skills),
-        assets.characters[name].as_str(),
+        character::get_avatar_path(name, &assets.characters),
         character::get_frame_path(kingdom, monarch, &assets.frames),
         character::get_health_path(kingdom, monarch, &assets.health),
         character::get_name_color(kingdom, monarch, &styles.name_outline_colors),
