@@ -126,8 +126,6 @@ pub fn render_draw_text_inputs(canvas: &mut ImageBuffer<Rgba<u8>, Vec<<Rgba<u8> 
 }
 
 mod tests {
-    use super::*;
-
     #[test]
     fn test_generate_draw_text_details() {
         let font_regular = Vec::from(include_bytes!("../test/regular.ttf") as &[u8]);

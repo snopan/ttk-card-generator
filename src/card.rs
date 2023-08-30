@@ -3,7 +3,7 @@
 use image::{ImageBuffer, Rgba, RgbaImage};
 
 use rusttype::{Font, Scale};
-use text_render::{render::{render_draw_text_inputs}};
+use text_render::render::render_draw_text_inputs;
 
 
 mod layout;

@@ -1,6 +1,6 @@
 use log::warn;
-use types::{ Segment, Format };
-use parser::{ get_formatted_word };
+use types::Segment;
+use parser::get_formatted_word;
 
 pub mod types;
 mod parser;

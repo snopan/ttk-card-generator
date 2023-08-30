@@ -1,6 +1,6 @@
 use card::FontConfig;
-use image::{Pixel, Rgba};
-use rusttype::{Font};
+use image::Rgba;
+use rusttype::Font;
 
 mod config;
 mod card;
@@ -43,7 +43,7 @@ fn main() {
     card.save(String::from("./output/image.png")).unwrap();
 }
 
-fn make_skills_text(skills: &Vec<config::Skill>) -> String {
+fn make_skills_text(skills: &[config::Skill]) -> String {
     skills.iter().map(|s| -> String {
         let name = s.name.split(' ').map(|x| format!("@bold;{}", x)).collect::<Vec<String>>().join(" ");
         format!("{}\n{}", name, s.description)
