@@ -78,30 +78,30 @@ fn get_health_path<'a>(kingdom: &str, monarch: bool, health: &'a config::Health)
     }
 }
 
-fn get_name_color<'a>(kingdom: &str, monarch: bool, colors: &'a config::NameOutlineColors) -> Rgba<u8> {
+fn get_name_color(kingdom: &str, monarch: bool, colors: &config::NameOutlineColors) -> Rgba<u8> {
     if monarch {
-        return Rgba(colors.zhu.clone());
+        return Rgba(colors.zhu);
     }
     
     match kingdom {
-        "kingdomless" => Rgba(colors.kingdomless.clone()),
-        "shu" => Rgba(colors.shu.clone()),
-        "wei" => Rgba(colors.wei.clone()),
-        "wu" => Rgba(colors.wu.clone()),
+        "kingdomless" => Rgba(colors.kingdomless),
+        "shu" => Rgba(colors.shu),
+        "wei" => Rgba(colors.wei),
+        "wu" => Rgba(colors.wu),
         _ => panic!("Not a valid kingdom!")
     }
 }
 
-fn get_box_color<'a>(kingdom: &str, monarch: bool, colors: &'a config::SkillBoxColors) -> Rgba<u8> {
+fn get_box_color(kingdom: &str, monarch: bool, colors: &config::SkillBoxColors) -> Rgba<u8> {
     if monarch {
-        return Rgba(colors.zhu.clone());
+        return Rgba(colors.zhu);
     }
     
     match kingdom {
-        "kingdomless" => Rgba(colors.kingdomless.clone()),
-        "shu" => Rgba(colors.shu.clone()),
-        "wei" => Rgba(colors.wei.clone()),
-        "wu" => Rgba(colors.wu.clone()),
+        "kingdomless" => Rgba(colors.kingdomless),
+        "shu" => Rgba(colors.shu),
+        "wei" => Rgba(colors.wei),
+        "wu" => Rgba(colors.wu),
         _ => panic!("Not a valid kingdom!")
     }
 }

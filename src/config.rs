@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize, de};
-use std::{fs::File, io::{BufReader, Read, self}, collections::HashMap};
+use std::{fs::File, io::{BufReader, self}, collections::HashMap};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Skill {
