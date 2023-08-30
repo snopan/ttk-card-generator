@@ -7,7 +7,9 @@ mod card;
 
 fn main() {
 
-    let config = config::load_config(String::from("./temp_config.json")).unwrap();
+    let characters = config::load_characters(String::from("./characters.json")).unwrap();
+    let assets = config::load_assets(String::from("./assets.json")).unwrap();
+    let styles = config::load_styles(String::from("./styles.json")).unwrap();
 
 
     let font_regular = Font::try_from_vec(Vec::from(include_bytes!("../asset/regular.ttf") as &[u8])).unwrap();
@@ -20,31 +22,20 @@ fn main() {
         font_title: &font_title
     };
 
-    let character = &config.characters[0];
+    let character = &characters.list[0];
+    let name = character.name.as_str();
+    let kingdom = character.kingdom.as_str();
+    let monarch = character.monarch;
 
     let card = card::make_card(
-        character.name.as_str(),
+        name,
         character.health,
         make_skills_text(&character.skills),
-        character.picture.as_str(),
-        get_frame_path(
-            character.kingdom.as_str(),
-            character.monarch,
-            &config.assets.frames
-        ),
-        get_health_path(
-            character.kingdom.as_str(),
-            character.monarch,
-            &config.assets.health,
-        ),
-        get_name_color(
-            character.kingdom.as_str(),
-            character.monarch,
-        ),
-        get_box_color(
-            character.kingdom.as_str(),
-            character.monarch,
-        ),
+        assets.characters[name].as_str(),
+        get_frame_path(kingdom, monarch, &assets.frames),
+        get_health_path(kingdom, monarch, &assets.health),
+        get_name_color(kingdom, monarch, &styles.name_outline_colors),
+        get_box_color(kingdom, monarch, &styles.skill_box_colors),
         1024,
         fonts
     );
@@ -87,30 +78,30 @@ fn get_health_path<'a>(kingdom: &str, monarch: bool, health: &'a config::Health)
     }
 }
 
-fn get_name_color(kingdom: &str, monarch: bool) -> Rgba<u8> {
+fn get_name_color<'a>(kingdom: &str, monarch: bool, colors: &'a config::NameOutlineColors) -> Rgba<u8> {
     if monarch {
-        return Rgba([]);
+        return Rgba(colors.zhu.clone());
     }
     
     match kingdom {
-        "kingdomless" => Rgba([]),
-        "shu" => Rgba([]),
-        "wei" => Rgba([]),
-        "wu" => Rgba([]),
+        "kingdomless" => Rgba(colors.kingdomless.clone()),
+        "shu" => Rgba(colors.shu.clone()),
+        "wei" => Rgba(colors.wei.clone()),
+        "wu" => Rgba(colors.wu.clone()),
         _ => panic!("Not a valid kingdom!")
     }
 }
 
-fn get_box_color(kingdom: &str, monarch: bool) -> Rgba<u8> {
+fn get_box_color<'a>(kingdom: &str, monarch: bool, colors: &'a config::SkillBoxColors) -> Rgba<u8> {
     if monarch {
-        return Rgba([]);
+        return Rgba(colors.zhu.clone());
     }
     
     match kingdom {
-        "kingdomless" => Rgba([]),
-        "shu" => Rgba([]),
-        "wei" => Rgba([]),
-        "wu" => Rgba([]),
+        "kingdomless" => Rgba(colors.kingdomless.clone()),
+        "shu" => Rgba(colors.shu.clone()),
+        "wei" => Rgba(colors.wei.clone()),
+        "wu" => Rgba(colors.wu.clone()),
         _ => panic!("Not a valid kingdom!")
     }
 }
