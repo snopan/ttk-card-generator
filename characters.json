@@ -18,7 +18,7 @@
       ]
     },
     {
-      "name": "Zhu Ge Liang",
+      "name": "Zhu GeLiang",
       "health": 3,
       "monarch": false,
       "male": true,
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "name": "Huang Yue Ying",
+      "name": "Huang YueYing",
       "health": 3,
       "monarch": false,
       "male": false,
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "name": "Young Zhu Ge Liang",
+      "name": "Young Zhu GeLiang",
       "health": 3,
       "monarch": false,
       "male": true,

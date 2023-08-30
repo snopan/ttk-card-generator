@@ -56,13 +56,19 @@ pub struct Assets {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct NameOutlineColors {
+    pub kingdomless: [u8; 4],
+    pub shu: [u8; 4],
+    pub wei: [u8; 4],
+    pub wu: [u8; 4],
+}
+#[derive(Serialize, Deserialize, Debug)]
+pub struct SkillBoxColors {
     pub zhu: [u8; 4],
     pub kingdomless: [u8; 4],
     pub shu: [u8; 4],
     pub wei: [u8; 4],
     pub wu: [u8; 4],
 }
-pub type SkillBoxColors = NameOutlineColors;
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Styles {
     pub name_outline_colors: NameOutlineColors,
