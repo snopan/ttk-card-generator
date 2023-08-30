@@ -1,8 +1,8 @@
 {
   "fonts": {
-    "regular": "./assets/regular.ttf",
-    "bold": "./assets/bold.ttf",
-    "title": "./assets/title.ttf"
+    "regular": "./assets/fonts/regular.ttf",
+    "bold": "./assets/fonts/bold.ttf",
+    "title": "./assets/fonts/title.ttf"
   },
   "health": {
     "kingdomless": "./assets/health/kingdomless.png",

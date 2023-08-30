@@ -1,4 +1,4 @@
-use std::{io::{self, BufReader, BufRead, Read}, fs::File};
+use std::{io::{self, BufReader, Read}, fs::File};
 
 use card::FontConfig;
 use image::Rgba;
