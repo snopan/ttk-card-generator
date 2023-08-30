@@ -47,7 +47,7 @@ pub fn get_health_path<'a>(kingdom: &str, monarch: bool, health: &'a config::Hea
     }
 }
 
-pub fn get_name_color(kingdom: &str, monarch: bool, colors: &config::NameOutlineColors) -> Rgba<u8> {
+pub fn get_name_color(kingdom: &str, colors: &config::NameOutlineColors) -> Rgba<u8> {
     match kingdom {
         "kingdomless" => Rgba(colors.kingdomless),
         "shu" => Rgba(colors.shu),

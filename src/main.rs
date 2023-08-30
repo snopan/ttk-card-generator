@@ -34,7 +34,7 @@ fn main() {
         character::get_avatar_path(name, &assets.characters),
         character::get_frame_path(kingdom, monarch, &assets.frames),
         character::get_health_path(kingdom, monarch, &assets.health),
-        character::get_name_color(kingdom, monarch, &styles.name_outline_colors),
+        character::get_name_color(kingdom, &styles.name_outline_colors),
         character::get_box_color(kingdom, monarch, &styles.skill_box_colors),
         1024,
         fonts
