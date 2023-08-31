@@ -22,6 +22,7 @@ pub fn make_card(
     avatar_path: &str,
     frame_path: &str,
     health_path: &str,
+    gender_path: &str,
     name_color: Rgba<u8>,
     box_color: Rgba<u8>,
     card_width: u32,
@@ -100,6 +101,14 @@ pub fn make_card(
         layout.health_top_right_y(skills_text_height) as i64,
         layout.health_offset() as i64,
         layout.health_length()
+    );
+
+    operations::draw_gender(
+        &mut card,
+        gender_path,
+        layout.gender_top_left_x() as i64,
+        layout.gender_top_left_y() as i64,
+        layout.gender_length()
     );
 
     card

@@ -22,6 +22,8 @@ const NAME_OUTER_OUTLINE: u32 = 6;
 const HEALTH_LENGTH: u32 = 100;
 const HEALTH_OFFSET: u32 = 50;
 
+const GENDER_LENGTH: u32 = 80;
+
 pub struct Layout {
     card_width: u32,
 }
@@ -106,6 +108,17 @@ impl Layout {
         self.name_top_left_y(skills_text_height)
     }
 
+    pub fn gender_top_left_x(&self) -> u32 {
+        self.skills_box_top_left_x() - self.gender_length() * 2/5
+    }
+
+    pub fn gender_top_left_y(&self) -> u32 {
+        self.content_bot_right_y() - (
+            self.skills_box_margin() +
+            self.gender_length() * 2/3
+        )
+    }
+
     // Sizing
     pub fn skills_box_margin(&self) -> u32 {
         self.scale_value(SKILLS_BOX_MARGIN)
@@ -155,6 +168,10 @@ impl Layout {
         self.scale_value(HEALTH_OFFSET)
     }
 
+    pub fn gender_length(&self) -> u32 {
+        self.scale_value(GENDER_LENGTH)
+    }
+
     // Derived sizing
     pub fn content_width(&self) -> u32 {
         self.content_bot_right_x() - self.content_top_left_x()
@@ -173,7 +190,7 @@ impl Layout {
             self.skills_box_padding() +
             self.skills_box_outline() +
             self.skills_box_gap()
-        )
+        ) + self.skills_box_padding() // Extra padding on the bottom for gender icon
     }
 
     pub fn skills_text_width(&self) -> u32 {

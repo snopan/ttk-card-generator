@@ -22,18 +22,19 @@ fn main() {
         font_title: &font_title
     };
 
-    let character = &characters.list[0];
-    let name = character.name.as_str();
-    let kingdom = character.kingdom.as_str();
-    let monarch = character.monarch;
+    let c = &characters.list[0];
+    let name = c.name.as_str();
+    let kingdom = c.kingdom.as_str();
+    let monarch = c.monarch;
 
     let card = card::make_card(
         name,
-        character.health,
-        character::make_skills_text(&character.skills),
+        c.health,
+        character::make_skills_text(&c.skills),
         character::get_avatar_path(name, &assets.characters),
         character::get_frame_path(kingdom, monarch, &assets.frames),
         character::get_health_path(kingdom, monarch, &assets.health),
+        character::get_gender_path(kingdom, monarch, c.male, &assets.genders),
         character::get_name_color(kingdom, &styles.name_outline_colors),
         character::get_box_color(kingdom, monarch, &styles.skill_box_colors),
         1024,

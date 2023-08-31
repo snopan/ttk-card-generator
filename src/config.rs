@@ -47,10 +47,30 @@ pub struct Frames {
     pub wu: String
 }
 #[derive(Serialize, Deserialize, Debug)]
+pub struct Genders {
+    pub kingdomless_zhu_male: String,
+    pub kingdomless_zhu_female: String,
+    pub kingdomless_male: String,
+    pub kingdomless_female: String,
+    pub shu_zhu_male: String,
+    pub shu_zhu_female: String,
+    pub shu_male: String,
+    pub shu_female: String,
+    pub wei_zhu_male: String,
+    pub wei_zhu_female: String,
+    pub wei_male: String,
+    pub wei_female: String,
+    pub wu_zhu_male: String,
+    pub wu_zhu_female: String,
+    pub wu_male: String,
+    pub wu_female: String
+}
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Assets {
     pub fonts: Fonts,
     pub health: Health,
     pub frames: Frames,
+    pub genders: Genders,
     pub characters: HashMap<String, String>
 }
 

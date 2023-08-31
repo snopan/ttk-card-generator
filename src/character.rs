@@ -22,12 +22,12 @@ pub fn get_avatar_path<'a>(name: &str, character_assets: &'a HashMap<String, Str
 pub fn get_frame_path<'a>(kingdom: &str, monarch: bool, frames: &'a config::Frames) -> &'a str {
     match (kingdom, monarch) {
         ("kingdomless", false) => frames.kingdomless.as_str(),
-        ("shu", false) => frames.shu.as_str(),
-        ("wei", false) => frames.wei.as_str(),
-        ("wu", false) => frames.wu.as_str(),
         ("kingdomless", true) => frames.kingdomless_zhu.as_str(),
+        ("shu", false) => frames.shu.as_str(),
         ("shu", true) => frames.shu_zhu.as_str(),
+        ("wei", false) => frames.wei.as_str(),
         ("wei", true) => frames.wei_zhu.as_str(),
+        ("wu", false) => frames.wu.as_str(),
         ("wu", true) => frames.wu_zhu.as_str(),
         _ => panic!("Not a valid kingdom!")
     }
@@ -43,6 +43,28 @@ pub fn get_health_path<'a>(kingdom: &str, monarch: bool, health: &'a config::Hea
         "shu" => health.shu.as_str(),
         "wei" => health.wei.as_str(),
         "wu" => health.wu.as_str(),
+        _ => panic!("Not a valid kingdom!")
+    }
+}
+
+pub fn get_gender_path<'a>(kingdom: &str, monarch: bool, male: bool, genders: &'a config::Genders) -> &'a str {
+    match (kingdom, monarch, male) {
+        ("kingdomless", false, false) => genders.kingdomless_female.as_str(),
+        ("kingdomless", false, true) => genders.kingdomless_male.as_str(),
+        ("kingdomless", true, false) => genders.kingdomless_zhu_female.as_str(),
+        ("kingdomless", true, true) => genders.kingdomless_zhu_male.as_str(),
+        ("shu", false, false) => genders.shu_female.as_str(),
+        ("shu", false, true) => genders.shu_male.as_str(),
+        ("shu", true, false) => genders.shu_zhu_female.as_str(),
+        ("shu", true, true) => genders.shu_zhu_male.as_str(),
+        ("wei", false, false) => genders.wei_female.as_str(),
+        ("wei", false, true) => genders.wei_male.as_str(),
+        ("wei", true, false) => genders.wei_zhu_female.as_str(),
+        ("wei", true, true) => genders.wei_zhu_male.as_str(),
+        ("wu", false, false) => genders.wu_female.as_str(),
+        ("wu", false, true) => genders.wu_male.as_str(),
+        ("wu", true, false) => genders.wu_zhu_female.as_str(),
+        ("wu", true, true) => genders.wu_zhu_male.as_str(),
         _ => panic!("Not a valid kingdom!")
     }
 }

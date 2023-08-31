@@ -147,3 +147,20 @@ pub fn draw_health(
         );
     }
 }
+
+pub fn draw_gender(
+    card: &mut Card,
+    gender_path: &str,
+    top_left_x: i64,
+    top_left_y: i64,
+    length: u32
+) {
+    let gender = Reader::open(gender_path).unwrap().decode().unwrap();
+    let gender = resize::<DynamicImage>(
+        &gender,
+        length,
+        length,
+        FilterType::Lanczos3
+    );
+    overlay(card, &gender, top_left_x, top_left_y);
+}
