@@ -21,6 +21,24 @@
     "wu_zhu": "./assets/frames/wu_zhu.png",
     "wu": "./assets/frames/wu.png"
   },
+  "genders": {
+    "kingdomless_zhu_male": "./assets/genders/kingdomless_zhu_male.png",
+    "kingdomless_zhu_female": "./assets/genders/kingdomless_zhu.png",
+    "kingdomless_male": "./assets/genders/kingdomless_male.png",
+    "kingdomless_female": "./assets/genders/kingdomless_female.png",
+    "shu_zhu_male": "./assets/genders/shu_zhu_male.png",
+    "shu_zhu_female": "./assets/genders/shu_zhu_female.png",
+    "shu_male": "./assets/genders/shu_male.png",
+    "shu_female": "./assets/genders/shu_female.png",
+    "wei_zhu_male": "./assets/genders/wei_zhu_male.png",
+    "wei_zhu_female": "./assets/genders/wei_zhu_female.png",
+    "wei_male": "./assets/genders/wei_male.png",
+    "wei_female": "./assets/genders/wei_female.png",
+    "wu_zhu_male": "./assets/genders/wu_zhu_male.png",
+    "wu_zhu_female": "./assets/genders/wu_zhu_female.png",
+    "wu_male": "./assets/genders/wu_male.png",
+    "wu_female": "./assets/genders/wu_female.png"
+  },
   "characters": {
     "Liu Bei": "./assets/characters/liu_bei.png"
   }
