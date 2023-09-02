@@ -7,130 +7,74 @@
     v-model="search"
 />
 
-<ul>
-    <div 
-        id="test"
-        v-for="c in characters.list"
-        onClick="clickCharacter(c.name)"
-        v-show="!search.length || c.name.toLowerCase().includes(search)" 
-    >
-        {{ c.name }}
-    </div>
-</ul>
+<div id="character-list">
+  <div 
+      class="character-items"
+      v-for="c in characters"
+      @click="clickCharacter(c.name)"
+      v-show="!search.length || c.name.toLowerCase().includes(search)" 
+  >
+    <div :class="`kingdom ${c.kingdom} ${c.monarch && 'zhu'}`"></div>
+    <div>{{ c.name }}</div>
+  </div>
+</div>
 
 <style>
-    * { box-sizing:border-box; }
+  #character-list {
+    width: 75%;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
 
-/* basic stylings ------------------------------------------ */
-.container 		{ 
-  font-family:'Roboto';
-  width:600px; 
-  margin:30px auto 0; 
-  display:block; 
-  padding:10px 50px 50px;
-}
-h2 		 { 
-  text-align:center; 
-  margin-bottom:50px; 
-}
-h2 small { 
-  font-weight:normal; 
-  color:#888; 
-  display:block; 
-}
-.footer 	{ text-align:center; }
-.footer a  { color:#53B2C8; }
+  .character-items {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    border-bottom: 1px solid black
+  }
 
-/* form starting stylings ------------------------------- */
-.group 			  { 
-  position:relative; 
-  margin-bottom:45px; 
-}
-input 				{
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #757575;
-}
-input:focus 		{ outline:none; }
+  .character-items:last-child {
+    border-bottom: none
+  }
 
-/* LABEL ======================================= */
-label 				 {
-  color:#999; 
-  font-size:18px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-}
+  .character-items:hover {
+    background-color: black;
+  }
 
-/* active state */
-input:focus ~ label, input:valid ~ label 		{
-  top:-20px;
-  font-size:14px;
-  color:#5264AE;
-}
+  .kingdom {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
 
-/* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:300px; }
-.bar:before, .bar:after 	{
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:#5264AE; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-}
-.bar:before {
-  left:50%;
-}
-.bar:after {
-  right:50%; 
-}
+  .shu {
+    background-color: red;
+  }
 
-/* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
-}
+  .wei {
+    background-color: blue;
+  }
 
-/* HIGHLIGHTER ================================== */
-.highlight {
-  position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-}
+  .wu {
+    background-color: green;
+  }
+  
+  .kingdomless {
+    background-color: gray;
+  }
 
-/* active state */
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
-}
+  .zhu {
+    border: 1px solid yellow;
+  }
 
-/* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
+  input {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus 		{ outline:none; }
 </style>
