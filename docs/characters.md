@@ -50,7 +50,7 @@
     display: grid;
     height: 75vh;
     overflow: hidden;
-    grid-template-columns: 38% 4% 58%
+    grid-template-columns: 38% 4% 58%;
   }
 
   #search, #info {
@@ -61,103 +61,96 @@
     border-radius: 10px;
   }
 
-  #search {
-    input {
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
+  #character-list {
+    height: 90%;
+    overflow-y: auto;
+    border: 1px solid black;
+  }
 
-    #character-list {
-      height: 90%;
-      overflow-y: auto;
-      border: 1px solid black;
-    }
+  .character-items {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    border-bottom: 1px solid black;
+  }
 
-    .character-items {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      padding: 15px;
-      border-bottom: 1px solid black;
+  .character-items:hover {
+    background-color: black;
+  }
 
-      .kingdom {
-        width: 10px;
-        height: 10px;
-        margin-right: 10px;
-      }
+  .kingdom {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
 
-      .shu {
-        background-color: red;
-      }
+  .shu {
+    background-color: red;
+  }
 
-      .wei {
-        background-color: blue;
-      }
+  .wei {
+    background-color: blue;
+  }
 
-      .wu {
-        background-color: green;
-      }
-      
-      .kingdomless {
-        background-color: gray;
-      }
+  .wu {
+    background-color: green;
+  }
+  
+  .kingdomless {
+    background-color: gray;
+  }
 
-      .zhu {
-        border: 1px solid yellow;
-      }
-    }
-
-    .character-items:hover {
-      background-color: black;
-    }
+  .zhu {
+    border: 1px solid yellow;
   }
 
   #info {
     overflow-y: auto;
+  }
 
-    #name-title {
-      font-size: 2rem;
-      display: flex;
-    }
+  #name-title {
+    font-size: 2rem;
+    display: flex;
+  }
 
-    .field {
-      font-size: 1.2rem;
-      margin: 20px 0;
-    }
+  .field {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
 
-    #skills-title {
-      font-size: 1.7rem;
-      margin: 20px 0;
-    }
+  #skills-title {
+    font-size: 1.7rem;
+    margin: 20px 0;
+  }
 
-    #skills-list {
-      width: 100%;
-      border: 1px solid black;
-      border-radius: 10px;
-    }
+  #skills-list {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
 
-    .skill {
-      padding: 10px;
-      border-bottom: 1px solid black
-    }
-    
-    .skill:last-child {
-      border-bottom: none
-    }
+  .skill {
+    padding: 10px;
+    border-bottom: 1px solid black
+  }
+  
+  .skill:last-child {
+    border-bottom: none
+  }
 
-    .skill-name {
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
+  .skill-name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
 
-    .skill-description {
-      font-size: 1.2rem;
-    }
+  .skill-description {
+    font-size: 1.2rem;
+  }
 
-    #name-title, #skills-title {
-      font-weight: 600;
-    }
+  #name-title, #skills-title {
+    font-weight: 600;
   }
 
   input {
@@ -167,6 +160,8 @@
     width:100%;
     border:none;
     border-bottom:1px solid #757575;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
   input:focus 		{ outline:none; }
 </style>
