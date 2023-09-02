@@ -1,2 +1,3 @@
 * [Rules](/)
-* [Characters](characters.md)
+* [Glossary](glossary.md)
+* [Characters & Abilities](characters.md)

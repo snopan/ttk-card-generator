@@ -1,18 +1,21 @@
-# Characters
+# Characters & Abilities
 
 <div id="characters-wrapper">
   <div id="search">
     <input
       type="search"
-      placeholder="Type in the character name here..."
+      placeholder="Type in the character name or a skill here..."
       v-model="search"
     />
     <div id="character-list">
       <div 
-        class="character-items"
+        :class="`character-items ${c.name === selected && 'selected'}`"
         v-for="c in characters"
         @click="clickCharacter(c.name)"
-        v-show="!search.length || c.name.toLowerCase().includes(search)" 
+        v-show="
+          !search.length ||
+          c.name.toLowerCase().includes(search.toLowerCase()) ||
+          c.skills.find(s => s.name.toLowerCase().includes(search.toLowerCase()))" 
       >
         <div :class="`kingdom ${c.kingdom} ${c.monarch && 'zhu'}`"></div>
         <div>{{ c.name }}</div>
@@ -75,7 +78,7 @@
     border-bottom: 1px solid black;
   }
 
-  .character-items:hover {
+  .character-items:hover, .selected {
     background-color: black;
   }
 
