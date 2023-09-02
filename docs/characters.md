@@ -58,16 +58,18 @@
 
   #search, #info {
     width: 100%;
-    min-height: 75%;
+    min-height: 100%;
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: #262626;
   }
 
   #character-list {
-    height: 90%;
+    height: calc(100% - 60px);
     overflow-y: auto;
     border: 1px solid black;
+    background-color: #3f3f3f;
   }
 
   .character-items {
@@ -79,7 +81,8 @@
   }
 
   .character-items:hover, .selected {
-    background-color: black;
+    color: #ea6f5a;
+    background-color: #323232;
   }
 
   .kingdom {
@@ -135,7 +138,8 @@
 
   .skill {
     padding: 10px;
-    border-bottom: 1px solid black
+    border-bottom: 1px solid black;
+    background-color: #3f3f3f;
   }
   
   .skill:last-child {
