@@ -112,7 +112,7 @@
       "health": 3,
       "monarch": false,
       "male": true,
-      "kingdom": "",
+      "kingdom": "shu",
       "skills": [
         {
           "name": "Formation [Enforced Ability]",

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '',
+      repo: '',
+      loadSidebar: true,
+      vueGlobalOptions: {
+        data() {
+          return {
+            search: "",
+            characters: {},
+          }
+        },
+        methods: {
+          getCharacters() {
+            let url = "https://raw.githubusercontent.com/snopan/ttk-card-generator/main/characters.json"
+            fetch(url)
+            .then(res => res.json())
+            .then(out => {
+              console.log(out);
+              this.characters = out})
+            .catch(err => { throw err; })
+          },
+          clickCharacter(name) {
+
+          }
+        },
+        mounted() {
+          if (Object.keys(characters).length) { return }
+          this.getCharacters();
+        }
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <
+  <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+</body>
+</html>
