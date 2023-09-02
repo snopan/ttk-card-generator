@@ -2,9 +2,9 @@
     <div v-if="characterInfo">
         <div id="name-title">
             <div style="margin-right: 10px;">{{ characterInfo.name }}</div>
-            <div v-if="characterInfo.male">:male_sign:</div>
-            <div v-else>:female_sign:</div>
-            <div v-if="characterInfo.monarch">:crown:</div>
+            <div v-if="characterInfo.male" title="Male">:male_sign:</div>
+            <div v-else title="Female">:female_sign:</div>
+            <div v-if="characterInfo.monarch" title="Monarch">:crown:</div>
         </div>
         <div class="field">
             Health: 
