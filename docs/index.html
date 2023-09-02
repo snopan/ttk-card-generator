@@ -53,7 +53,8 @@
             .catch(err => { throw err; })
           },
           clickCharacter(name) {
-            window.location.href = `/#/info?name=${this.trimWhiteSpaces(name)}`
+            const currentUrl = window.location.href.split("#")[0]
+            window.location.href = `${currentUrl}#/info?name=${this.trimWhiteSpaces(name)}`
           },
           trimWhiteSpaces(str) {
             return str.replace(/ /g, '')
