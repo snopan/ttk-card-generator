@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-    <div v-else>No character found</div>
+    <div v-else>Please select a character</div>
   </div>
 </div>
 
