@@ -21,6 +21,7 @@
           return {
             search: "",
             characters: [],
+            selected: ""
           }
         },
         methods: {
@@ -53,19 +54,13 @@
             .catch(err => { throw err; })
           },
           clickCharacter(name) {
-            const currentUrl = window.location.href.split("#")[0]
-            window.location.href = `${currentUrl}#/info?name=${this.trimWhiteSpaces(name)}`
-          },
-          trimWhiteSpaces(str) {
-            return str.replace(/ /g, '')
+            this.selected = name;
           }
         },
         computed: {
           characterInfo() {
-            const urlParams = new URLSearchParams(window.location.hash.split("?")[1]);
-            const name = urlParams.get("name")
             for (let char of this.characters) {
-              if (this.trimWhiteSpaces(char.name) === name) {
+              if (char.name === this.selected) {
                 return char
               }
             }
