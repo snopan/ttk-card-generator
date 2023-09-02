@@ -171,4 +171,31 @@
     margin-bottom: 10px;
   }
   input:focus 		{ outline:none; }
+
+  @media only screen and (max-width: 800px) {
+    #characters-wrapper {
+      grid-template-rows: 39% 2% 59%;
+      grid-template-columns: 1fr;
+    }
+
+    #name-title {
+      font-size: 1.7rem;
+    }
+
+    .field {
+      font-size: 0.9rem;
+    }
+
+    #skills-title {
+      font-size: 1.4rem;
+    }
+
+    .skill-name {
+      font-size: 1.2rem;
+    }
+
+    .skill-description {
+      font-size: 0.9rem;
+    }
+  }
 </style>
