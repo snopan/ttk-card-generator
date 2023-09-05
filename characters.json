@@ -1,5 +1,6 @@
 {
   "list": [
+    /* Shu Monarchs */
     {
       "name": "Liu Bei",
       "health": 4,
@@ -9,7 +10,7 @@
       "skills": [
         {
           "name": "Benevolence",
-          "description": "During your playing phase, you can give any amount of hand cards to another player.  If the total number of cards given away is 2 or more, you regain 1 health."
+          "description": "During your play phase, you can give any amount of hand cards to another player.  If the total number of cards given away is 2 or more, you regain 1 health."
         },
         {
           "name": "Rouse [Monarch Ability]",
@@ -17,6 +18,29 @@
         }
       ]
     },
+    {
+      "name": "Liu Shan",
+      "health": 3,
+      "monarch": true,
+      "male": true,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Relish [Enforced Ability]",
+          "description": "Whenever another player uses [Strike] on you, they must discard a basic card, or that [Strike] has no effect on you."
+        },
+        {
+          "name": "Devolution",
+          "description": "You can skip your play phase. If you do so, you can discard a hand card at the end of your turn and let another player start an extra turn."
+        },
+        {
+          "name": "Irony [Monarch Ability][Awakening Ability]",
+          "description": "At the beginning of your turn, if your health the lowest or among the lowest, you must raise your health limit by 1, regain 1 health and permanently gain the ability [Rouse]."
+        }
+      ]
+    },
+
+    /* Shu */
     {
       "name": "Zhu GeLiang",
       "health": 3,
@@ -30,7 +54,7 @@
         },
         {
           "name": "Desolate [Enforced Ability]",
-          "description": "When you have no hand cards, you cannot become the target of [Strike] or [Duel]."
+          "description": "Whenever you have no hand cards, you cannot become the target of [Strike] or [Duel]."
         }
       ]
     },
@@ -69,7 +93,7 @@
       "skills": [
         {
           "name": "Enlightenment",
-          "description": "Every time you use a non delayed scroll card (before it activates), you can immediately draw 1 card."
+          "description": "Whenever you use a non delayed scroll card (before it activates), you can immediately draw 1 card."
         },
         {
           "name": "Prodigy",
@@ -90,7 +114,7 @@
         },
         {
           "name": "Ironsteed",
-          "description": "When you use [Strike] on any target player, you can choose to make a Judgement. If the Judgement Result is a ♥ or ♦, the [Strike] cannot be evaded by a [Dodge]."
+          "description": "Whenever you use [Strike] on another player, you can choose to make a Judgement. If the Judgement Result is a ♥ or ♦, the [Strike] cannot be evaded by a [Dodge]."
         }
       ]
     },
@@ -103,7 +127,7 @@
       "skills": [
         {
           "name": "Berserk",
-          "description": "During your playing phase, you can use any number of [Strike]."
+          "description": "During your play phase, you can use any number of [Strike]."
         }
       ]
     },
@@ -116,11 +140,11 @@
       "skills": [
         {
           "name": "Formation [Enforced Ability]",
-          "description": "When you have no armour equipped, it will always appear as if you have [Eight Trigrams] equipped."
+          "description": "Whenever you have no armour equipped, it will always appear as if you have [Eight Trigrams] equipped."
         },
         {
           "name": "Arson",
-          "description": "During your playing phase, you can use any ♥ or ♦ suit hand cards as [Fire Attack]."
+          "description": "During your play phase, you can use any ♥ or ♦ suit hand cards as [Fire Attack]."
         },
         {
           "name": "Decipher",
@@ -141,7 +165,7 @@
         },
         {
           "name": "Nirvana [Restricted Ability]",
-          "description": "When you are on the brink of death, you can choose to discard all your cards and reset to unchained state. Then resurrect to 3 health and draw 3 cards."
+          "description": "Whenever you are on the brink of death, you can choose to discard all your cards and reset to unchained state. Then resurrect to 3 health and draw 3 cards."
         }
       ]
     },
@@ -154,7 +178,7 @@
       "skills": [
         {
           "name": "Fearsome Archer",
-          "description": "During your playing phase, you can make your [Strike] not evadable by [Dodge] under either of these circumstances: \n1. The number of hand cards of the target player is less than or equal to your attacking range. \n2. The number of hand cards of the target player is more than or equal to your health."
+          "description": "During your play phase, you can make your [Strike] not evadable by [Dodge] under either of these circumstances: \n1. The number of hand cards of the target player is less than or equal to your attacking range. \n2. The number of hand cards of the target player is more than or equal to your health."
         }
       ]
     },
@@ -214,11 +238,11 @@
       "skills": [
         {
           "name": "Grudges [Enforced Ability]",
-          "description": "Whenever another player cause you to regain 1 health, that player can draw 1 card. Whenever another player deal damage to you, they must give you a ♥ suit hand card or else that player loses 1 health."
+          "description": "Whenever another player cause you to regain 1 health, that player can draw 1 card. Whenever another player deal damage to you, they must give you a ♥ suit hand card or else that player takes 1 damage."
         },
         {
           "name": "Dazzlement",
-          "description": "During your playing phase, you can give a ♥ suit hand card to another player, then you can take a card from that player and give to any other player besides that player. Limited to once per turn."
+          "description": "During your play phase, you can give a ♥ suit hand card to another player, then you can take a card from that player and give to any other player besides that player. Limited to once per turn."
         }
       ]
     },
@@ -231,7 +255,7 @@
       "skills": [
         {
           "name": "Mind Game",
-          "description": "During your playing phase, if your number of hand cards exceed your health limit, you can view the top 3 cards of the deck. Of these 3 cards, reveal any number of ♥ suit cards then keep them. For the remaining cards, place on the top of the deck in any order. Limited to once per turn."
+          "description": "During your play phase, if your number of hand cards exceed your health limit, you can view the top 3 cards of the deck. Of these 3 cards, reveal any number of ♥ suit cards then keep them. For the remaining cards, place on the top of the deck in any order. Limited to once per turn."
         },
         {
           "name": "Weep [Enforced Ability]",
@@ -252,30 +276,58 @@
         },
         {
           "name": "Nominate",
-          "description": "During your playing phase, you can discard up to 3 cards then let another player draw the same number of cards. For this if you discard 3 cards of the same type, you regain 1 health. Limited to once per turn."
+          "description": "During your play phase, you can discard up to 3 cards then let another player draw the same number of cards. For this if you discard 3 cards of the same type, you regain 1 health. Limited to once per turn."
         }
       ]
     },
     {
-      "name": "Liu Shan",
-      "health": 3,
-      "monarch": true,
+      "name": "Jiang Wei",
+      "health": 4,
+      "monarch": false,
       "male": true,
       "kingdom": "shu",
       "skills": [
         {
-          "name": "Relish [Enforced Ability]",
-          "description": "Whenever another uses [Strike] targeting you, they must discard a basic card, or that [Strike] has no effect on you."
+          "name": "Taunt",
+          "description": "During your play phase, you can pick a player that is able to [Strike] you. That player must use a [Strike] on you, otherwise you discard 1 card from that player. Limited to once per turn."
         },
         {
-          "name": "Devolution",
-          "description": "You can skip your play phase. If you do so, you can discard a hand card at the end of your turn and let another player start an extra turn."
-        },
-        {
-          "name": "Irony [Monarch Ability][Awakening Ability]",
-          "description": "At the beginning of your turn, if your health the lowest or among the lowest, you must raise your health limit by 1, regain 1 unit of health and permanently gain the ability [Rouse]."
+          "name": "Ambition Continues",
+          "description": "At the beginning of your turn, if you have no hand cards, you must either regain 1 health or draw 2 cards. Then reduce your health limit by 1 and permanetly gain the ability [Star Gaze]."
         }
       ]
-    }
+    },
+    {
+      "name": "Sun ShangXiang",
+      "health": 3,
+      "monarch": false,
+      "male": false,
+      "kingdom": "shu",
+      "skills": [
+        {
+          "name": "Marriage",
+          "description": "During your play phase, you can discard 2 hand cards and pick any injured male character. Then both the male character and yourself will regain 1 health each. Limited to once per turn. "
+        },
+        {
+          "name": "Warrior Lady",
+          "description": "Whenever you lose an item in the equipment field, you can draw 2 cards."
+        }
+      ]
+    },
+
+    /* Wei Monarchs */
+    {
+      "name": "Cao Cao",
+      "health": 4,
+      "monarch": true,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Villainous Hero",
+          "description": "Whenever you take damage, you can "
+        }
+      ]
+    },
   ]
 }
