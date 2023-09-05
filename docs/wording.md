@@ -14,7 +14,15 @@ Whether numbers are written as literal numbers(1) or english numbers(one) depend
 * When numbering cards we will use "a" for singular and literal numbers for multiple, eg. a hand card, 5 hand cards
 
 ## Condition based
-When we want to describe something happens because certain condition(s) the text must start with "Whenver"
+When we want to describe something happens because certain condition(s) the text must start with "Whenver". Those conditions include
+* Whenever you are on the brink of death
+* Whenever you have no armor equipped
+* Whenever you have no hand cards
+
+## Other Players
+The wording for doing something to other players or other players doing something to you are
+* Whenever you X on/to another player
+* Whenever another player X on/to you
 
 ## Health and Health Limit
 * Regain X health
@@ -46,23 +54,6 @@ There is also timing before preparation phase and after discard phase which are
 
 ## Restrictions
 * Limited to once per turn
-
-### Condition based
-* Whenever you are on the brink of death
-* Whenever you have no armor equipped
-* Whenever you have no hand cards
-
-### Action based
-* Whenever you use X 
-* Whenever you use X on another player
-* Whenever another player uses X
-* Whenever another player uses X on you
-
-## Action
-* You can discard X
-* You can use X
-* You can view X number of cards from the top of the deck
-* Draw X cards
 
 ## Gender
 When refering to gender characters we should say 
