@@ -30,7 +30,6 @@ The wording for doing something to other players or other players doing somethin
 * Reduce/Raise your health limit by X
 * Whenever another player cause you to regain X health
 
-
 ## Damage
 * Whenever another player deal damage to you
 * Whenever another player deal X damage to you
