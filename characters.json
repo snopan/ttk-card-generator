@@ -1,6 +1,5 @@
 {
   "list": [
-    // Shu Monarchs
     {
       "name": "Liu Bei",
       "health": 4,
@@ -40,7 +39,6 @@
       ]
     },
 
-    // Shu
     {
       "name": "Zhu GeLiang",
       "health": 3,
@@ -315,7 +313,6 @@
       ]
     },
 
-    // Wei Monarchs
     {
       "name": "Cao Cao",
       "health": 4,
