@@ -30,7 +30,7 @@
         },
         {
           "name": "Devolution",
-          "description": "You can skip your play phase. If you do so, you can discard a hand card at the end of your turn and let another player start an extra turn."
+          "description": "At the beginning of your play phase, you can skip this phase. If you do so then at the end of your turn, you can discard a hand card, then let another player start an extra turn."
         },
         {
           "name": "Irony [Monarch Ability][Awakening Ability]",
@@ -206,7 +206,7 @@
         },
         {
           "name": "Rise Again",
-          "description": "During your drawing phase, if you are not at full health, you can choose to give up the drawing phase and instead, flip X number of cards from the deck (X being the amount of health you've currently lost). Of these X cards, you will gain 1 health for every ♥ suit card. The ♥ suit cards will be discarded while the remaining cards will be kept into your hand."
+          "description": "During your draw phase, if you are not at full health, you can choose to give up the drawing phase and instead, flip X number of cards from the deck (X being the amount of health you've currently lost). Of these X cards, you will gain 1 health for every ♥ suit card. The ♥ suit cards will be discarded while the remaining cards will be kept into your hand."
         }
       ]
     },
@@ -236,7 +236,7 @@
       "skills": [
         {
           "name": "Grudges [Enforced Ability]",
-          "description": "Whenever another player cause you to regain 1 health, that player can draw 1 card. Whenever another player deal damage to you, they must give you a ♥ suit hand card or else that player takes 1 damage."
+          "description": "Whenever another player caused you to regain 1 health, that player can draw 1 card. Whenever another player deal damage to you, they must give you a ♥ suit hand card or else that player takes 1 damage."
         },
         {
           "name": "Dazzlement",
@@ -322,7 +322,115 @@
       "skills": [
         {
           "name": "Villainous Hero",
-          "description": "Whenever you take damage, you can "
+          "description": "Whenever you take damage, you can immediately obtain the card(s) that caused you to take damage."
+        },
+        {
+          "name": "Royal Escort [Monarch Ability]",
+          "description": "Whenever you have to use a [Dodge], you can ask any other Wei characters to use a [Dodge] on your behalf."
+        }
+      ]
+    },
+
+    {
+      "name": "Guo Jia",
+      "health": 3,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Envy of Heaven",
+          "description": "For your judgment, after the judgement is reosolved, you can immediately obtain the judgement card."
+        },
+        {
+          "name": "Bequeathed Strategy",
+          "description": "Whenever you take 1 damage, you can view 2 cards from the top of the deck and give each card to any player."
+        }
+      ]
+    },
+    {
+      "name": "Si MaYi",
+      "health": 3,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Retaliation",
+          "description": "Whenever you take damage, you can obtain a card from the player who is the damage source."
+        },
+        {
+          "name": "Demonic Talent",
+          "description": "For any player's judgement, before the judgement is resolved, you can replace the judgement card with one of your hand cards."
+        }
+      ]
+    },
+    {
+      "name": "Xia HouDun",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Eye for an eye",
+          "description": "Whenever you take damage, you can make a judgement. If the judgement result is not ♥ then the player who is the damage source must either take 1 damage or discard 2 hand cards."
+        }
+      ]
+    },
+    {
+      "name": "Xu Chu",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Bare-Chested",
+          "description": "During your draw phase, you can draw 1 less card. If you do so then during your play phase, any [Strike] or [Duel] you use will deal 1 extra damage (where you are the damage source)."
+        }
+      ]
+    },
+    {
+      "name": "Zhang Liao",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Sudden Strike",
+          "description": "At the beginning of your draw phase, you can skip this phase, then obtain a hand card each from at most 2 players (at least 1 player)."
+        }
+      ]
+    },
+    {
+      "name": "Zhen Ji",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Impetus for War",
+          "description": "You can use any ♠ or ♣ hand cards as [Dodge]."
+        },
+        {
+          "name": "Goddess Luo",
+          "description": "At the beginning of your turn, you can make a judgement. If the judgement result is ♠ or ♣, you can obtain the judgement card and you can make another judgement. If the judgement result is ♥ or ♦ then ability ends."
+        }
+      ]
+    },
+    {
+      "name": "Dian Wei",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Ferocious Assault",
+          "description": "During your play phase, you can take 1 damage or discard a weapon card, then you deal 1 damage to a character within your strike range. Limited to once per turn."
         }
       ]
     }
