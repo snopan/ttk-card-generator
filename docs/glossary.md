@@ -1,6 +1,7 @@
 # Glossary
 
-## Actions
+### Flip
+The hero can be faced up or down, whenever the hero card is faced down it means their next turn is skipped. The act flipping can swap the hero to be faced up or down.
 
 ### Use
 Play a card from your hand
@@ -8,17 +9,14 @@ Play a card from your hand
 ### Draw
 Take cards from the top of the deck
 
-### Take
-Take cards from other players or other sources stated by the skill
+### Obtain
+Take cards from sources other than the deck
 
 ### Lose
 Anything that is removed from your card fields count as Lose
 
 ### Discard
-Remove cards from card fields by a player
-
-### View
-Pick up and look at card(s) from top of the deck
+Remove cards from a player's card fields
 
 ### Reveal
 Show all other players what the card is

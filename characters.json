@@ -30,7 +30,7 @@
         },
         {
           "name": "Devolution",
-          "description": "At the beginning of your play phase, you can skip this phase. If you do so then at the end of your turn, you can discard a hand card, then let another character start an extra turn."
+          "description": "At the beginning of your play phase, you can skip this phase. If you do so, at the end of your turn, you can discard a hand card, then let another character start an extra turn."
         },
         {
           "name": "Irony [Monarch Ability][Awakening Ability]",
@@ -206,7 +206,7 @@
         },
         {
           "name": "Rise Again",
-          "description": "During your draw phase, if you are not at full health, you can choose to give up the drawing phase and instead, flip X number of cards from the deck (X being the amount of health you've currently lost). Of these X cards, you will gain 1 health for every ♥ suit card. The ♥ suit cards will be discarded while the remaining cards will be kept into your hand."
+          "description": "During your draw phase, if you are not at full health, you can choose to give up the drawing phase and instead, reveal X number of cards from the deck (X being the amount of health you've currently lost). Of these X cards, you will gain 1 health for every ♥ suit card. The ♥ suit cards will be discarded while the remaining cards will be kept into your hand."
         }
       ]
     },
@@ -330,6 +330,27 @@
         }
       ]
     },
+    {
+      "name": "Cao Pi",
+      "health": 3,
+      "monarch": true,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Unnatural",
+          "description": "Whenever another character dies, you can immediately obtain all of their cards."
+        },
+        {
+          "name": "Banish into Exile",
+          "description": "Whenever you take damage, you can make another character draw X cards, where X is the number of health you've lost, then that character flip their hero."
+        },
+        {
+          "name": "Exalt the Powerful [Monarch Ability]",
+          "description": "For any other Wei character's judgement, if the judgement result is ♠ or ♣, then that character can let you draw a card."
+        }
+      ]
+    },
 
     {
       "name": "Guo Jia",
@@ -344,7 +365,7 @@
         },
         {
           "name": "Bequeathed Strategy",
-          "description": "Whenever you take 1 damage, you can view 2 cards from the top of the deck and give each card to any character."
+          "description": "Whenever you take damage for each point of damage you take, you can view 2 cards from the top of the deck and give each card to any character."
         }
       ]
     },
@@ -431,6 +452,79 @@
         {
           "name": "Ferocious Assault",
           "description": "During your play phase, you can take 1 damage or discard a weapon card, then you deal 1 damage to a character within your strike range. Limited to once per turn."
+        }
+      ]
+    },
+    {
+      "name": "Xun Yu",
+      "health": 3,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Rouse the Tiger",
+          "description": "During your play phase, you can compare with another character with more health than you. If you win, that character will deal 1 damage to another character of your choice within their strike range. If you lose, that character will deal 1 damage to you. Limited to once per turn."
+        },
+        {
+          "name": "Eternal Loyalty",
+          "description": "Whenever you take damage for each point of damage you take, you can allow any character to draw until they replenish their cards to the health limit."
+        }
+      ]
+    },
+    {
+      "name": "Cao Ren",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Entrenched",
+          "description": "At the end of your turn, you can draw 3 cards then flip your hero."
+        }
+      ]
+    },
+    {
+      "name": "Xia HouYuan",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Godspeed",
+          "description": "You can do any of these actions\n 1. Skip your judgement and draw phase\n 2. Skip your play phase and discard a equipment card.\n For every action you do, act as if you used a [Strike] to any character."
+        }
+      ]
+    },
+    {
+      "name": "Xu Huang",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Blockade",
+          "description": "During your draw phase, you can use any ♠ or ♣ basic cards or equipment cards as [Starvation]. Your range for [Starvation] is extended to physical distance of 2."
+        }
+      ]
+    },
+    {
+      "name": "Cao Zhi",
+      "health": 3,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Falling Bloom",
+          "description": "Whenever another character discards ♣ cards due to judgement or discard phase, you can obtain those cards."
+        }
+        {
+          "name": "Drunken Quatrain",
+          "description": ""
         }
       ]
     }
