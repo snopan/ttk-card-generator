@@ -9,7 +9,7 @@
       "skills": [
         {
           "name": "Benevolence",
-          "description": "During your play phase, you can give any amount of hand cards to another player.  If the total number of cards given away is 2 or more, you regain 1 health."
+          "description": "During your play phase, you can give any amount of hand cards to another character.  If the total number of cards given away is 2 or more, you regain 1 health."
         },
         {
           "name": "Rouse [Monarch Ability]",
@@ -26,11 +26,11 @@
       "skills": [
         {
           "name": "Relish [Enforced Ability]",
-          "description": "Whenever another player uses [Strike] on you, they must discard a basic card, or that [Strike] has no effect on you."
+          "description": "Whenever another character uses [Strike] on you, they must discard a basic card, or that [Strike] has no effect on you."
         },
         {
           "name": "Devolution",
-          "description": "At the beginning of your play phase, you can skip this phase. If you do so then at the end of your turn, you can discard a hand card, then let another player start an extra turn."
+          "description": "At the beginning of your play phase, you can skip this phase. If you do so then at the end of your turn, you can discard a hand card, then let another character start an extra turn."
         },
         {
           "name": "Irony [Monarch Ability][Awakening Ability]",
@@ -48,7 +48,7 @@
       "skills": [
         {
           "name": "Star Gaze",
-          "description": "At the beginning of your turn, you can view X number of cards from the top of the deck (X equals to the number of players still in play with X having maximum of 5). Of these X cards, you can choose any number of cards to place on the top of the deck in any order and rest are to be placed at the bottom of the deck in any order."
+          "description": "At the beginning of your turn, you can view X number of cards from the top of the deck (X equals to the number of characters still in play with X having maximum of 5). Of these X cards, you can choose any number of cards to place on the top of the deck in any order and rest are to be placed at the bottom of the deck in any order."
         },
         {
           "name": "Desolate [Enforced Ability]",
@@ -112,7 +112,7 @@
         },
         {
           "name": "Ironsteed",
-          "description": "Whenever you use [Strike] on another player, you can choose to make a Judgement. If the Judgement Result is a ♥ or ♦, the [Strike] cannot be evaded by a [Dodge]."
+          "description": "Whenever you use [Strike] on another character, you can choose to make a Judgement. If the Judgement Result is a ♥ or ♦, the [Strike] cannot be evaded by a [Dodge]."
         }
       ]
     },
@@ -176,7 +176,7 @@
       "skills": [
         {
           "name": "Fearsome Archer",
-          "description": "During your play phase, you can make your [Strike] not evadable by [Dodge] under either of these circumstances: \n1. The number of hand cards of the target player is less than or equal to your attacking range. \n2. The number of hand cards of the target player is more than or equal to your health."
+          "description": "During your play phase, you can make your [Strike] not evadable by [Dodge] under either of these circumstances: \n1. The number of hand cards of the target character is less than or equal to your attacking range. \n2. The number of hand cards of the target character is more than or equal to your health."
         }
       ]
     },
@@ -189,7 +189,7 @@
       "skills": [
         {
           "name": "Mad Bone [Enforced Ability]",
-          "description": "Whenever you deal damage to any player within physical range of 1, you regain 1 health for every 1 damage dealt."
+          "description": "Whenever you deal damage to any character within physical range of 1, you regain 1 health for every 1 damage dealt."
         }
       ]
     },
@@ -219,7 +219,7 @@
       "skills": [
         {
           "name": "Giant Elephant [Enforced Ability]",
-          "description": "[Barbarian Invasion] has no effect to you. Whenever another player uses [Barbarian Invasion] and the card's effects are concluded, you will acquire that card."
+          "description": "[Barbarian Invasion] has no effect to you. Whenever another character uses [Barbarian Invasion] and the card's effects are concluded, you will acquire that card."
         },
         {
           "name": "Fiery Edge",
@@ -236,11 +236,11 @@
       "skills": [
         {
           "name": "Grudges [Enforced Ability]",
-          "description": "Whenever another player caused you to regain 1 health, that player can draw 1 card. Whenever another player deal damage to you, they must give you a ♥ suit hand card or else that player takes 1 damage."
+          "description": "Whenever another character caused you to regain 1 health, that character can draw 1 card. Whenever another character deal damage to you, they must give you a ♥ suit hand card or else that character takes 1 damage."
         },
         {
           "name": "Dazzlement",
-          "description": "During your play phase, you can give a ♥ suit hand card to another player, then you can take a card from that player and give to any other player besides that player. Limited to once per turn."
+          "description": "During your play phase, you can give a ♥ suit hand card to another character, then you can take a card from that character and give to any other character besides that character. Limited to once per turn."
         }
       ]
     },
@@ -257,7 +257,7 @@
         },
         {
           "name": "Weep [Enforced Ability]",
-          "description": "The player that kills you must discard all their cards immediately."
+          "description": "The character that kills you must discard all their cards immediately."
         }
       ]
     },
@@ -270,11 +270,11 @@
       "skills": [
         {
           "name": "Silence [Enforced Ability]",
-          "description": "Non-delayed scroll cards you use have no effect when targeting other players, and non-delayed scroll cards other players use have no effect when targeting you."
+          "description": "Non-delayed scroll cards you use have no effect when targeting other characters, and non-delayed scroll cards other characters use have no effect when targeting you."
         },
         {
           "name": "Nominate",
-          "description": "During your play phase, you can discard up to 3 cards then let another player draw the same number of cards. For this if you discard 3 cards of the same type, you regain 1 health. Limited to once per turn."
+          "description": "During your play phase, you can discard up to 3 cards then let another character draw the same number of cards. For this if you discard 3 cards of the same type, you regain 1 health. Limited to once per turn."
         }
       ]
     },
@@ -287,7 +287,7 @@
       "skills": [
         {
           "name": "Taunt",
-          "description": "During your play phase, you can pick a player that is able to [Strike] you. That player must use a [Strike] on you, otherwise you discard 1 card from that player. Limited to once per turn."
+          "description": "During your play phase, you can pick a character that is able to [Strike] you. That character must use a [Strike] on you, otherwise you discard 1 card from that character. Limited to once per turn."
         },
         {
           "name": "Ambition Continues",
@@ -344,7 +344,7 @@
         },
         {
           "name": "Bequeathed Strategy",
-          "description": "Whenever you take 1 damage, you can view 2 cards from the top of the deck and give each card to any player."
+          "description": "Whenever you take 1 damage, you can view 2 cards from the top of the deck and give each card to any character."
         }
       ]
     },
@@ -357,11 +357,11 @@
       "skills": [
         {
           "name": "Retaliation",
-          "description": "Whenever you take damage, you can obtain a card from the player who is the damage source."
+          "description": "Whenever you take damage, you can obtain a card from the character who is the damage source."
         },
         {
           "name": "Demonic Talent",
-          "description": "For any player's judgement, before the judgement is resolved, you can replace the judgement card with one of your hand cards."
+          "description": "For any character's judgement, before the judgement is resolved, you can replace the judgement card with one of your hand cards."
         }
       ]
     },
@@ -374,7 +374,7 @@
       "skills": [
         {
           "name": "Eye for an eye",
-          "description": "Whenever you take damage, you can make a judgement. If the judgement result is not ♥ then the player who is the damage source must either take 1 damage or discard 2 hand cards."
+          "description": "Whenever you take damage, you can make a judgement. If the judgement result is not ♥ then the character who is the damage source must either take 1 damage or discard 2 hand cards."
         }
       ]
     },
@@ -400,7 +400,7 @@
       "skills": [
         {
           "name": "Sudden Strike",
-          "description": "At the beginning of your draw phase, you can skip this phase, then obtain a hand card each from at most 2 players (at least 1 player)."
+          "description": "At the beginning of your draw phase, you can skip this phase, then obtain a hand card each from at most 2 characters (at least 1 character)."
         }
       ]
     },
