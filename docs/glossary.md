@@ -1,5 +1,8 @@
 # Glossary
 
+## Lost of Life
+This means the health is just lost and no damage dealt by anyone. It means any skills that get triggered based on damage dealt and [Iron Chain] that also get triggered when there's elemental damage, all of these will not trigger.
+
 ### Flip
 The hero can be faced up or down, whenever the hero card is faced down it means their next turn is skipped. The act flipping can swap the hero to be faced up or down.
 

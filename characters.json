@@ -26,7 +26,7 @@
       "skills": [
         {
           "name": "Relish [Enforced Ability]",
-          "description": "Whenever another character uses [Strike] on you, they must discard a basic card, or that [Strike] has no effect on you."
+          "description": "Whenever another character uses a [Strike] on you, they must discard a basic card, or that [Strike] has no effect on you."
         },
         {
           "name": "Devolution",
@@ -34,7 +34,11 @@
         },
         {
           "name": "Irony [Monarch Ability][Awakening Ability]",
-          "description": "At the beginning of your turn, if your health the lowest or among the lowest, you must raise your health limit by 1, regain 1 health and permanently gain the ability [Rouse]."
+          "description": "At the beginning of your turn, if your health the lowest or among the lowest, you must raise your health limit by 1, regain 1 health and unlock the ability \"Rouse\"."
+        },
+        {
+          "name": "Rouse [Monarch Ability][Locked Ability]",
+          "description": "You can ask any Shu characters to use a [Strike] for you."
         }
       ]
     },
@@ -78,7 +82,7 @@
       "skills": [
         {
           "name": "Paladin",
-          "description": "You can use any ♥ or ♦ suit cards as [Strike]."
+          "description": "You can use any ♥ or ♦ cards as [Strike]."
         }
       ]
     },
@@ -91,7 +95,7 @@
       "skills": [
         {
           "name": "Enlightenment",
-          "description": "Whenever you use a non delayed scroll card (before it activates), you can immediately draw 1 card."
+          "description": "Whenever you use a non delayed scroll card (before it activates), you can immediately draw a card."
         },
         {
           "name": "Prodigy",
@@ -112,7 +116,7 @@
         },
         {
           "name": "Ironsteed",
-          "description": "Whenever you use [Strike] on another character, you can choose to make a Judgement. If the Judgement Result is a ♥ or ♦, the [Strike] cannot be evaded by a [Dodge]."
+          "description": "Whenever you use a [Strike] on another character, you can choose to make a Judgement. If the Judgement Result is ♥ or ♦, that [Strike] cannot be evaded by a [Dodge]."
         }
       ]
     },
@@ -142,7 +146,7 @@
         },
         {
           "name": "Arson",
-          "description": "During your play phase, you can use any ♥ or ♦ suit hand cards as [Fire Attack]."
+          "description": "During your play phase, you can use any ♥ or ♦ hand cards as [Fire Attack]."
         },
         {
           "name": "Decipher",
@@ -176,7 +180,7 @@
       "skills": [
         {
           "name": "Fearsome Archer",
-          "description": "During your play phase, you can make your [Strike] not evadable by [Dodge] under either of these circumstances: \n1. The number of hand cards of the target character is less than or equal to your attacking range. \n2. The number of hand cards of the target character is more than or equal to your health."
+          "description": "During your play phase, you can make your [Strike] not evadable by [Dodge] under either of these circumstances: \n 1. The number of hand cards of the target character is less than or equal to your attacking range. \n 2. The number of hand cards of the target character is more than or equal to your health."
         }
       ]
     },
@@ -206,7 +210,7 @@
         },
         {
           "name": "Rise Again",
-          "description": "During your draw phase, if you are not at full health, you can choose to give up the drawing phase and instead, reveal X number of cards from the deck (X being the amount of health you've currently lost). Of these X cards, you will gain 1 health for every ♥ suit card. The ♥ suit cards will be discarded while the remaining cards will be kept into your hand."
+          "description": "During your draw phase, if you are not at full health, you can choose to give up the drawing phase and instead, reveal X number of cards from the deck (X being the number of your health lost). Of these X cards, you will gain 1 health for every ♥ card. The ♥ cards will be discarded while the remaining cards will be kept into your hand."
         }
       ]
     },
@@ -219,11 +223,11 @@
       "skills": [
         {
           "name": "Giant Elephant [Enforced Ability]",
-          "description": "[Barbarian Invasion] has no effect to you. Whenever another character uses [Barbarian Invasion] and the card's effects are concluded, you will acquire that card."
+          "description": "[Barbarian Invasion] has no effect to you. \n Whenever another character uses [Barbarian Invasion] and the card's effects are concluded, you will acquire that card."
         },
         {
           "name": "Fiery Edge",
-          "description": "Whenever you use [Strike] to deal damage, you can choose to Compare Cards. If you win you take 1 card from the target."
+          "description": "Whenever you use [Strike] to deal damage, you can choose to Compare Cards with that character. If you win you take a card from that character."
         }
       ]
     },
@@ -236,11 +240,11 @@
       "skills": [
         {
           "name": "Grudges [Enforced Ability]",
-          "description": "Whenever another character caused you to regain 1 health, that character can draw 1 card. Whenever another character deal damage to you, they must give you a ♥ suit hand card or else that character takes 1 damage."
+          "description": "Whenever another character caused you to regain 1 health, that character can draw a card. Whenever another character deal damage to you, they must give you a ♥ hand card or else that character takes 1 damage."
         },
         {
           "name": "Dazzlement",
-          "description": "During your play phase, you can give a ♥ suit hand card to another character, then you can take a card from that character and give to any other character besides that character. Limited to once per turn."
+          "description": "During your play phase, you can give a ♥ hand card to another character, then you can take a card from that character and give to any other character besides that character. Limited to once per turn."
         }
       ]
     },
@@ -253,7 +257,7 @@
       "skills": [
         {
           "name": "Mind Game",
-          "description": "During your play phase, if your number of hand cards exceed your health limit, you can view the top 3 cards of the deck. Of these 3 cards, reveal any number of ♥ suit cards then keep them. For the remaining cards, place on the top of the deck in any order. Limited to once per turn."
+          "description": "During your play phase, if your number of hand cards exceed your health limit, you can view the top 3 cards of the deck. Of these 3 cards, reveal any number of ♥ cards then keep them. For the remaining cards, place on the top of the deck in any order. Limited to once per turn."
         },
         {
           "name": "Weep [Enforced Ability]",
@@ -287,7 +291,7 @@
       "skills": [
         {
           "name": "Taunt",
-          "description": "During your play phase, you can pick a character that is able to [Strike] you. That character must use a [Strike] on you, otherwise you discard 1 card from that character. Limited to once per turn."
+          "description": "During your play phase, you can pick a character that is able to [Strike] you. That character must use a [Strike] on you, otherwise you discard a card from that character. Limited to once per turn."
         },
         {
           "name": "Ambition Continues",
@@ -343,7 +347,7 @@
         },
         {
           "name": "Banish into Exile",
-          "description": "Whenever you take damage, you can make another character draw X cards, where X is the number of health you've lost, then that character flip their hero."
+          "description": "Whenever you take damage, you can make another character draw X cards, where X is the number of your health lost, then that character flip their hero."
         },
         {
           "name": "Exalt the Powerful [Monarch Ability]",
@@ -468,7 +472,7 @@
         },
         {
           "name": "Eternal Loyalty",
-          "description": "Whenever you take damage for each point of damage you take, you can allow any character to draw until they replenish their cards to the health limit."
+          "description": "Whenever you take damage for each point of damage you take, you can allow any character to draw until they replenish their hand cards to the health limit."
         }
       ]
     },
@@ -494,7 +498,7 @@
       "skills": [
         {
           "name": "Godspeed",
-          "description": "You can do any of these actions\n 1. Skip your judgement and draw phase\n 2. Skip your play phase and discard a equipment card.\n For every action you do, act as if you used a [Strike] to any character."
+          "description": "You can do any of these actions \n 1. Skip your judgement and draw phase \n 2. Skip your play phase and discard a equipment card. \n For every action you do, act as if you used [Strike] to any character."
         }
       ]
     },
@@ -521,10 +525,74 @@
         {
           "name": "Falling Bloom",
           "description": "Whenever another character discards ♣ cards due to judgement or discard phase, you can obtain those cards."
-        }
+        },
         {
           "name": "Drunken Quatrain",
-          "description": ""
+          "description": "Whenever you can use [Mead] and your hero is faced up, you can flip your hero and act as if you used a [Mead]. \n Whenever you take damage and your hero is faced down, you can flip your hero."
+        }
+      ]
+    },
+    {
+      "name": "Yu Jin",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Resolute",
+          "description": "Whenever you have no armour equipped, ♠ or ♣ [Strike] have no effect on you."
+        }
+      ]
+    },
+    {
+      "name": "Zhang ChunHua",
+      "health": 3,
+      "monarch": false,
+      "male": false,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Ruthless [Enforced Ability]",
+          "description": "Any damage you deal counts as loss of life."
+        },
+        {
+          "name": "Bereavement",
+          "description": "Excluding discard phase, whenever the number of your hand cards is less than the number of your health lost, you can immediately draw until you replenish your hand cards to the number of your health lost."
+        }
+      ]
+    },
+    {
+      "name": "Deng Ai",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Amassing Terrain",
+          "description": "Whenever you lose a card outside your turn, you can make a judgement. If the Judgement Result is not ♥ then put the judgement card above your hero and these cards are called \"Terrain\". For each \"Terrain\" you have, -1 distance in any range calculations."
+        },
+        {
+          "name": "Conduit [Awakening Ability]",
+          "description": "At the beginning of your turn, if you have more than 3 \"Terrain\", you must reduce your health limit by 1 and unlock the ability \"Blitz\"."
+        },
+        {
+          "name": "Blitz [Locked Ability]",
+          "description": "During your play phase, you can use any \"Terrain\" as [Snatch]."
+        }
+      ]
+    },
+    {
+      "name": "Zhang He",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wei",
+      "skills": [
+        {
+          "name": "Flexibility",
+          "description": "At the beginning of each of your phases except preparation and end phase, you can discard a hand card and skip that phase. \n If you skip draw phase then you take a hand card each from a maximum of two other characters. \n If you skip play phas then you can move a card from a character's card field to another character's identical card field."
         }
       ]
     }

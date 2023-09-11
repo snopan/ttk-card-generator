@@ -54,6 +54,7 @@ The phases include
 * Draw phase
 * Play phase
 * Discard phase
+* End phase
 There is also timing before preparation phase and after discard phase which are
 * At the beginning of your turn
 * At the end of your turn
