@@ -30,7 +30,7 @@
         },
         {
           "name": "Devolution",
-          "description": "At the beginning of your play phase, you can skip this phase. If you do so, at the end of your turn, you can discard a hand card, then let another character start an extra turn."
+          "description": "At the beginning of your play phase, you can skip this phase. If you do so, at the end of your turn, you can discard a hand card, then let another character start an additional turn."
         },
         {
           "name": "Irony [Monarch Ability][Awakening Ability]",
@@ -180,7 +180,7 @@
       "skills": [
         {
           "name": "Fearsome Archer",
-          "description": "During your play phase, you can make your [Strike] not evadable by [Dodge] under either of these circumstances: \n 1. The number of hand cards of the target character is less than or equal to your attacking range. \n 2. The number of hand cards of the target character is more than or equal to your health."
+          "description": "During your play phase, you can make your [Strike] not evadable by [Dodge] under either of these circumstances: \n 1. The number of hand cards of the target character is less than or equal to your attack range. \n 2. The number of hand cards of the target character is more than or equal to your health."
         }
       ]
     },
@@ -193,7 +193,7 @@
       "skills": [
         {
           "name": "Mad Bone [Enforced Ability]",
-          "description": "Whenever you deal damage to any character within physical range of 1, you regain 1 health for every 1 damage dealt."
+          "description": "Whenever you deal damage to any character within your interact range, you regain 1 health for every 1 damage dealt."
         }
       ]
     },
@@ -232,7 +232,7 @@
       ]
     },
     {
-      "name": "Fa Zhen",
+      "name": "Fa Zheng",
       "health": 3,
       "monarch": false,
       "male": true,
@@ -296,23 +296,6 @@
         {
           "name": "Ambition Continues",
           "description": "At the beginning of your turn, if you have no hand cards, you must either regain 1 health or draw 2 cards. Then reduce your health limit by 1 and permanetly gain the ability [Star Gaze]."
-        }
-      ]
-    },
-    {
-      "name": "Sun ShangXiang",
-      "health": 3,
-      "monarch": false,
-      "male": false,
-      "kingdom": "shu",
-      "skills": [
-        {
-          "name": "Marriage",
-          "description": "During your play phase, you can discard 2 hand cards and pick any injured male character. Then both the male character and yourself will regain 1 health each. Limited to once per turn. "
-        },
-        {
-          "name": "Warrior Lady",
-          "description": "Whenever you lose an item in the equipment field, you can draw 2 cards."
         }
       ]
     },
@@ -412,7 +395,7 @@
       "skills": [
         {
           "name": "Bare-Chested",
-          "description": "During your draw phase, you can draw 1 less card. If you do so then during your play phase, any [Strike] or [Duel] you use will deal 1 extra damage (where you are the damage source)."
+          "description": "During your draw phase, you can draw 1 less card. If you do so then during your play phase, any [Strike] or [Duel] you use will deal 1 additional damage (where you are the damage source)."
         }
       ]
     },
@@ -455,7 +438,7 @@
       "skills": [
         {
           "name": "Ferocious Assault",
-          "description": "During your play phase, you can take 1 damage or discard a weapon card, then you deal 1 damage to a character within your strike range. Limited to once per turn."
+          "description": "During your play phase, you can take 1 damage or discard a weapon card, then you deal 1 damage to a character within your attack range. Limited to once per turn."
         }
       ]
     },
@@ -468,7 +451,7 @@
       "skills": [
         {
           "name": "Rouse the Tiger",
-          "description": "During your play phase, you can compare with another character with more health than you. If you win, that character will deal 1 damage to another character of your choice within their strike range. If you lose, that character will deal 1 damage to you. Limited to once per turn."
+          "description": "During your play phase, you can compare with another character with more health than you. If you win, that character will deal 1 damage to another character of your choice within their attack range. If you lose, that character will deal 1 damage to you. Limited to once per turn."
         },
         {
           "name": "Eternal Loyalty",
@@ -511,7 +494,7 @@
       "skills": [
         {
           "name": "Blockade",
-          "description": "During your draw phase, you can use any ♠ or ♣ basic cards or equipment cards as [Starvation]. Your range for [Starvation] is extended to physical distance of 2."
+          "description": "During your draw phase, you can use any ♠ or ♣ basic cards or equipment cards as [Starvation]. Your interact range for [Starvation] is extended to 2."
         }
       ]
     },
@@ -593,6 +576,187 @@
         {
           "name": "Flexibility",
           "description": "At the beginning of each of your phases except preparation and end phase, you can discard a hand card and skip that phase. \n If you skip draw phase then you take a hand card each from a maximum of two other characters. \n If you skip play phas then you can move a card from a character's card field to another character's identical card field."
+        }
+      ]
+    },
+
+    {
+      "name": "Sun Quan",
+      "health": 4,
+      "monarch": true,
+      "male": true,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Balance of Power",
+          "description": "During your play phase, you can discard any number of cards and draw the same number of cards. Limited to once per turn."
+        },
+        {
+          "name": "Rescued [Monarch Ability][Enforced Ability]",
+          "description": "Whenever you are on the brink of death, if another Wu character caused you to regain 1 health via [Peach] then you recover an additional 1 health."
+        }
+      ]
+    },
+    {
+      "name": "Da Qiao",
+      "health": 3,
+      "monarch": false,
+      "male": false,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "National Colours",
+          "description": "During your play phase, you can use any ♦ cards as [Contentment]."
+        },
+        {
+          "name": "Displacement",
+          "description": "Whenever you become the target of [Strike], you can discard any card and redirct the [Strike] to another character who is not the originating character and is within your attack range."
+        }
+      ]
+    },
+    {
+      "name": "Gan Ning",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Suprise Raid",
+          "description": "During your play phase, you can use any ♠ or ♣ cards as [Dismantle]."
+        }
+      ]
+    },
+    {
+      "name": "Huang Gai",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Trojan Flesh",
+          "description": "During your play phase, you can take 1 damage then draw 2 cards."
+        }
+      ]
+    },
+    {
+      "name": "Lu Meng",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Self-Mastery",
+          "description": "If you have not used or played any [Strike] in your play phase, you can skip the discard phase of this round."
+        }
+      ]
+    },
+    {
+      "name": "Lu Xun",
+      "health": 3,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Humility [Enforced Ability]",
+          "description": "You cannot become the target of [Snatch] and [Contentment]"
+        },
+        {
+          "name": "One after another",
+          "description": "Whenever you lose your last hand card, you can immediately draw a card."
+        }
+      ]
+    },
+    {
+      "name": "Sun ShangXiang",
+      "health": 3,
+      "monarch": false,
+      "male": false,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Marriage",
+          "description": "During your play phase, you can discard 2 hand cards and pick any injured male character. Then both the male character and yourself will regain 1 health each. Limited to once per turn. "
+        },
+        {
+          "name": "Warrior Lady",
+          "description": "Whenever you lose an item in the equipment field, you can draw 2 cards."
+        }
+      ]
+    },
+    {
+      "name": "Zhou Yu",
+      "health": 3,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Dashing Hero",
+          "description": "During your draw phase, you can draw 1 additional card."
+        },
+        {
+          "name": "Sow Dissension",
+          "description": "During your play phase, you can ask a character to pick a suit, then take a hand card from you and reveal it. If the suits don't match then you deal 1 damage to that character. Regardless of the result, that character will keep the card. Limited to once per turn."
+        }
+      ]
+    },
+    {
+      "name": "Tai ShiCi",
+      "health": 4,
+      "monarch": false,
+      "male": true,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Justice of Heaven",
+          "description": "During your play phase, you can compare with another character. If you win the comparison: \n 1. You will have unlimited attack range \n 2. You can use 1 additional [Strike] in that play phase \n 3. Each [Strike] can target 1 additional character. \n If you lose the comparison, you cannot use [Strike] till the of the turn."
+        }
+      ]
+    },
+    {
+      "name": "Xiao Qiao",
+      "health": 3,
+      "monarch": false,
+      "male": false,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Heavenly Scent",
+          "description": "Whenever you are about to take damage, you can discard a ♥ card and redirect that damage to another character. Then that character draw X cards, where X is the number of thatcharacter's health lost."
+        },
+        {
+          "name": "Youthful Beauty [Enforced Ability]",
+          "description": "Your ♠ cards will be appear with ♥ suit."
+        }
+      ]
+    },
+    {
+      "name": "Zhou Tai",
+      "health": 4,
+      "monarch": false,
+      "male": false,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Refuting Death",
+          "description": "Whenever you health reaches 0 (brink of death),  "
+        }
+      ]
+    },
+    {
+      "name": "Sun Jian",
+      "health": 4,
+      "monarch": false,
+      "male": false,
+      "kingdom": "wu",
+      "skills": [
+        {
+          "name": "Lingering Spirit",
+          "description": "At the beginning of your turn, if you are hurt, you can pick another character and choose one of the following: \n 1. Draw X cards then discard a card. \n 2. Draw a card then discard X cards. \n Where X is the number of your health lost. Limited to once per turn."
         }
       ]
     }

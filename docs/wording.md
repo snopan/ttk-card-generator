@@ -66,3 +66,6 @@ There is also timing before preparation phase and after discard phase which are
 When refering to gender characters we should say 
 * Male character
 * Female character
+
+## Suits
+♥ ♦ ♠ ♣

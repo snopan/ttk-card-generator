@@ -51,3 +51,22 @@ Cards like weapon, armor, horses and treausre that are equipped would be in the 
 
 ### Judgement Field
 Cards like judgement, starvation and lightning which are delayed scroll cards when used will be in the judgement field
+
+## Ranges
+Whether you can do an action to another player limited by attack range or interact range depends on how far the target is and you and the target's horse modifiers.
+
+For example if you want to [Strike] a target that is 3 distance away from you (2 characters in between you and the target) and say you have an attack 
+
+### Attack Range
+Anyone within your Attack range you will be able to use a [Strike] on and by default a player's attack range is 1. If a player equips a weapon then their attack range is equal to the weapon's attack range. The attack range is also affected by your -1 horse and target's +1 horse when doing range calculation.
+
+### Interact Range
+There are some cards or skills that are limited by interact range and it means anyone within your interact range you will be able to use those cards and skills on them. By default a player's interact rnage is 1 but again it can be affected by your -1 horse and target's +1 horse when doing range calculation.
+
+## Use and Play
+
+### Use
+Using a card means it's a hand card that is played
+
+### Play
+Playing a card means it's played because of another card's effect is happening
