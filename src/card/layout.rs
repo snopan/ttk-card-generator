@@ -1,4 +1,3 @@
-
 const CARD_WIDTH: u32 = 1024;
 const CARD_HEIGHT: u32 = 1438;
 
@@ -53,7 +52,7 @@ impl Layout {
     pub fn content_bot_right_x(&self) -> u32 {
         self.scale_value(CONTENT_BOT_RIGHT_X)
     }
-    
+
     pub fn content_bot_right_y(&self) -> u32 {
         self.scale_value(CONTENT_BOT_RIGHT_Y)
     }
@@ -63,24 +62,22 @@ impl Layout {
     }
 
     pub fn skills_box_top_left_y(&self, skills_text_height: u32) -> u32 {
-        self.content_bot_right_y() - (
-            self.skills_box_height(skills_text_height) +
-            self.skills_box_margin()
-        )
+        self.content_bot_right_y()
+            - (self.skills_box_height(skills_text_height) + self.skills_box_margin())
     }
 
     pub fn skills_text_top_left_x(&self) -> u32 {
-        self.skills_box_top_left_x() + 
-            self.skills_box_outline() +
-            self.skills_box_gap() +
-            self.skills_box_padding()
+        self.skills_box_top_left_x()
+            + self.skills_box_outline()
+            + self.skills_box_gap()
+            + self.skills_box_padding()
     }
 
     pub fn skills_text_top_left_y(&self, skills_text_height: u32) -> u32 {
-        self.skills_box_top_left_y(skills_text_height) +
-            self.skills_box_outline() +
-            self.skills_box_gap() +
-            self.skills_box_padding()
+        self.skills_box_top_left_y(skills_text_height)
+            + self.skills_box_outline()
+            + self.skills_box_gap()
+            + self.skills_box_padding()
     }
 
     pub fn name_top_left_x(&self) -> u32 {
@@ -88,20 +85,17 @@ impl Layout {
     }
 
     pub fn name_top_left_y(&self, skills_text_height: u32) -> u32 {
-        self.skills_box_top_left_y(skills_text_height) - (
-            self.skills_box_margin()/2 +
-            self.name_text_scale()
-        )
+        self.skills_box_top_left_y(skills_text_height)
+            - (self.skills_box_margin() / 2 + self.name_text_scale())
     }
 
     pub fn health_top_right_x(&self) -> u32 {
-        self.content_bot_right_x() - (
-            self.skills_box_padding() +
-            self.skills_box_outline() +
-            self.skills_box_gap() +
-            self.skills_box_padding() +
-            self.health_length() * 2/3
-        )
+        self.content_bot_right_x()
+            - (self.skills_box_padding()
+                + self.skills_box_outline()
+                + self.skills_box_gap()
+                + self.skills_box_padding()
+                + self.health_length() * 2 / 3)
     }
 
     pub fn health_top_right_y(&self, skills_text_height: u32) -> u32 {
@@ -109,14 +103,11 @@ impl Layout {
     }
 
     pub fn gender_top_left_x(&self) -> u32 {
-        self.skills_box_top_left_x() - self.gender_length() * 2/5
+        self.skills_box_top_left_x() - self.gender_length() * 2 / 5
     }
 
     pub fn gender_top_left_y(&self) -> u32 {
-        self.content_bot_right_y() - (
-            self.skills_box_margin() +
-            self.gender_length() * 2/3
-        )
+        self.content_bot_right_y() - (self.skills_box_margin() + self.gender_length() * 2 / 3)
     }
 
     // Sizing
@@ -143,7 +134,7 @@ impl Layout {
     pub fn skills_text_scale(&self) -> u32 {
         self.scale_value(SKILLS_TEXT_SCALE)
     }
- 
+
     pub fn skills_text_space_width(&self) -> u32 {
         self.scale_value(SKILLS_TEXT_SPACE_WIDTH)
     }
@@ -180,32 +171,27 @@ impl Layout {
     pub fn content_height(&self) -> u32 {
         self.content_bot_right_y() - self.content_top_left_y()
     }
-    
+
     pub fn skills_box_width(&self) -> u32 {
-        self.content_width() - 2 * self.skills_box_margin() 
+        self.content_width() - 2 * self.skills_box_margin()
     }
 
     pub fn skills_box_height(&self, skills_text_height: u32) -> u32 {
-        skills_text_height + 2 * (
-            self.skills_box_padding() +
-            self.skills_box_outline() +
-            self.skills_box_gap()
-        ) + self.skills_box_padding() // Extra padding on the bottom for gender icon
+        skills_text_height
+            + 2 * (self.skills_box_padding() + self.skills_box_outline() + self.skills_box_gap())
+            + self.skills_box_padding() // Extra padding on the bottom for gender icon
     }
 
     pub fn skills_text_width(&self) -> u32 {
-        self.skills_box_width() - 2 * (
-            self.skills_box_outline() +
-            self.skills_box_gap() +
-            self.skills_box_padding()
-        )
+        self.skills_box_width()
+            - 2 * (self.skills_box_outline() + self.skills_box_gap() + self.skills_box_padding())
     }
 
     // Scaling helper
     fn scale_value(&self, value: u32) -> u32 {
         (value as f32 * self.card_scale()) as u32
     }
- 
+
     fn card_scale(&self) -> f32 {
         self.card_width as f32 / CARD_WIDTH as f32
     }

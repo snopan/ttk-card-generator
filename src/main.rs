@@ -1,20 +1,18 @@
-
 use std::thread;
 
 use card::FontConfig;
 
-mod config;
 mod card;
 mod character;
+mod config;
 mod font;
 
 fn main() {
-
     let characters = config::load_characters(String::from("./characters.json")).unwrap();
     let assets = config::load_assets(String::from("./assets.json")).unwrap();
     let styles = config::load_styles(String::from("./styles.json")).unwrap();
 
-    let font_regular = font::load_font(assets.fonts.regular).unwrap();
+    let font_regular = font::load_font::<'static>(assets.fonts.regular).unwrap();
     let font_bold = font::load_font(assets.fonts.bold).unwrap();
     let font_title = font::load_font(assets.fonts.title).unwrap();
 
@@ -39,14 +37,15 @@ fn main() {
                 character::get_name_color(kingdom, &styles.name_outline_colors),
                 character::get_box_color(kingdom, monarch, &styles.skill_box_colors),
                 1024,
-                FontConfig{
+                FontConfig {
                     font_regular: &font_regular,
                     font_bold: &font_bold,
-                    font_title: &font_title
-                }
+                    font_title: &font_title,
+                },
             );
 
-            card.save(String::from(format!("./output/{}.png", name))).unwrap();
+            card.save(format!("./output/{}.png", name)).unwrap();
+            println!("Saved card {}", name);
         }
     });
 

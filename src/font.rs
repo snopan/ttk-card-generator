@@ -1,4 +1,7 @@
-use std::{fs::File, io::{self, BufReader, Read}};
+use std::{
+    fs::File,
+    io::{self, BufReader, Read},
+};
 
 use rusttype::Font;
 
@@ -11,18 +14,18 @@ pub enum Error {
 pub fn load_font<'a>(path: String) -> Result<Font<'a>, Error> {
     let file = match File::open(path) {
         Ok(f) => f,
-        Err(error) => return Err(Error::OpenFileFail(error))
+        Err(error) => return Err(Error::OpenFileFail(error)),
     };
 
     let mut buf_reader = BufReader::new(file);
     let mut buf: Vec<u8> = vec![];
     match buf_reader.read_to_end(&mut buf) {
         Err(error) => return Err(Error::ReadBufferFail(error)),
-        _ => ""
+        _ => "",
     };
 
     match Font::try_from_vec(buf.to_vec()) {
         Some(f) => Ok(f),
-        None => Err(Error::ConvertFontFail)
+        None => Err(Error::ConvertFontFail),
     }
 }

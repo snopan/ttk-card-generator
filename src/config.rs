@@ -1,10 +1,14 @@
-use serde::{Deserialize, Serialize, de};
-use std::{fs::File, io::{BufReader, self}, collections::HashMap};
+use serde::{de, Deserialize, Serialize};
+use std::{
+    collections::HashMap,
+    fs::File,
+    io::{self, BufReader},
+};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Skill {
     pub name: String,
-    pub description: String
+    pub description: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -14,11 +18,11 @@ pub struct Character {
     pub monarch: bool,
     pub male: bool,
     pub kingdom: String,
-    pub skills: Vec<Skill>
+    pub skills: Vec<Skill>,
 }
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Characters {
-    pub list: Vec<Character>
+    pub list: Vec<Character>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -44,7 +48,7 @@ pub struct Frames {
     pub wei_zhu: String,
     pub wei: String,
     pub wu_zhu: String,
-    pub wu: String
+    pub wu: String,
 }
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Genders {
@@ -63,7 +67,7 @@ pub struct Genders {
     pub wu_zhu_male: String,
     pub wu_zhu_female: String,
     pub wu_male: String,
-    pub wu_female: String
+    pub wu_female: String,
 }
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Assets {
@@ -71,7 +75,7 @@ pub struct Assets {
     pub health: Health,
     pub frames: Frames,
     pub genders: Genders,
-    pub characters: HashMap<String, String>
+    pub characters: HashMap<String, String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -92,7 +96,7 @@ pub struct SkillBoxColors {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Styles {
     pub name_outline_colors: NameOutlineColors,
-    pub skill_box_colors: SkillBoxColors
+    pub skill_box_colors: SkillBoxColors,
 }
 
 #[derive(Debug)]
@@ -113,21 +117,21 @@ pub fn load_styles(path: String) -> Result<Styles, Error> {
     open_and_load_json::<Styles>(path)
 }
 
-fn open_and_load_json<T>(path: String) -> Result<T, Error> 
-where T: Serialize + de::DeserializeOwned 
+fn open_and_load_json<T>(path: String) -> Result<T, Error>
+where
+    T: Serialize + de::DeserializeOwned,
 {
     let file = match File::open(path) {
         Ok(f) => f,
-        Err(error) => return Err(Error::OpenFileFail(error))
+        Err(error) => return Err(Error::OpenFileFail(error)),
     };
 
     let buf_reader = BufReader::new(file);
 
     let config: T = match serde_json::from_reader::<_, T>(buf_reader) {
         Ok(c) => c,
-        Err(error) => return Err(Error::ConvertJsonFail(error))
+        Err(error) => return Err(Error::ConvertJsonFail(error)),
     };
 
     Ok(config)
 }
-
