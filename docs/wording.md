@@ -48,6 +48,7 @@ The way to describe start, middle and end of a phase for a round would be
 * At the beginning of your 
 * During your
 * At the end of your
+
 The phases include
 * Preparation phase
 * Judgement phase
@@ -55,6 +56,7 @@ The phases include
 * Play phase
 * Discard phase
 * End phase
+
 There is also timing before preparation phase and after discard phase which are
 * At the beginning of your turn
 * At the end of your turn
